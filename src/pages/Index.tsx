@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Services from '../components/Services';
+import Portfolio from '../components/Portfolio';
 import Partners from '../components/Partners';
 import Testimonials from '../components/Testimonials';
 import JoinTeam from '../components/JoinTeam';
@@ -18,6 +19,7 @@ const Index: React.FC = () => {
         <Hero />
         <About />
         <Services />
+        <Portfolio />
         <Partners />
         <Testimonials />
         <JoinTeam />
