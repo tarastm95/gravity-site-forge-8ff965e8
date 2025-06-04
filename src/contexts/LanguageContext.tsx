@@ -10,6 +10,19 @@ interface LanguageContextType {
 
 const translations = {
   uk: {
+    // Hero Slider
+    heroSlide1Title: 'Створюємо веб-рішення майбутнього',
+    heroSlide1Subtitle: 'Ми розробляємо сучасні веб-сайти та додатки, що допомагають вашому бізнесу досягати нових висот',
+    heroSlide1Highlight: '🚀 Акція: Знижка 50% на всі послуги!',
+    heroSlide2Title: 'Професійний дизайн та розробка',
+    heroSlide2Subtitle: 'Індивідуальний підхід до кожного проекту з використанням найсучасніших технологій',
+    heroSlide2Highlight: '💡 Безкоштовна консультація',
+    heroSlide3Title: 'Ваш успіх - наш пріоритет',
+    heroSlide3Subtitle: 'Створюємо рішення, які приносять реальні результати та збільшують ваші продажі',
+    heroSlide3Highlight: '⚡ Швидка реалізація проектів',
+    orderNow: 'Замовити зараз',
+    viewWork: 'Переглянути роботи',
+
     // Hero Section
     heroTitle1: 'Створюємо',
     heroTitle2: 'веб-рішення',
@@ -178,7 +191,6 @@ const translations = {
 
     // Buttons
     detailsButton: 'Деталі',
-    orderNow: 'Замовити зараз',
 
     // Contact Form
     contactTitle: 'Зв\'яжіться з нами',
@@ -357,6 +369,19 @@ const translations = {
     feature6_6: 'Пошук по сайту',
   },
   en: {
+    // Hero Slider
+    heroSlide1Title: 'Creating web solutions of the future',
+    heroSlide1Subtitle: 'We develop modern websites and applications that help your business reach new heights',
+    heroSlide1Highlight: '🚀 Promotion: 50% off all services!',
+    heroSlide2Title: 'Professional design and development',
+    heroSlide2Subtitle: 'Individual approach to each project using the latest technologies',
+    heroSlide2Highlight: '💡 Free consultation',
+    heroSlide3Title: 'Your success is our priority',
+    heroSlide3Subtitle: 'We create solutions that bring real results and increase your sales',
+    heroSlide3Highlight: '⚡ Fast project implementation',
+    orderNow: 'Order Now',
+    viewWork: 'View Work',
+
     // Hero Section
     heroTitle1: 'Creating',
     heroTitle2: 'web solutions',
@@ -525,7 +550,6 @@ const translations = {
 
     // Buttons
     detailsButton: 'Details',
-    orderNow: 'Order Now',
 
     // Contact Form
     contactTitle: 'Contact Us',
@@ -704,6 +728,19 @@ const translations = {
     feature6_6: 'Site search',
   },
   ru: {
+    // Hero Slider
+    heroSlide1Title: 'Создаем веб-решения будущего',
+    heroSlide1Subtitle: 'Мы разрабатываем современные веб-сайты и приложения, которые помогают вашему бизнесу достигать новых высот',
+    heroSlide1Highlight: '🚀 Акция: Скидка 50% на все услуги!',
+    heroSlide2Title: 'Профессиональный дизайн и разработка',
+    heroSlide2Subtitle: 'Индивидуальный подход к каждому проекту с использованием самых современных технологий',
+    heroSlide2Highlight: '💡 Бесплатная консультация',
+    heroSlide3Title: 'Ваш успех - наш приоритет',
+    heroSlide3Subtitle: 'Создаем решения, которые приносят реальные результаты и увеличивают ваши продажи',
+    heroSlide3Highlight: '⚡ Быстрая реализация проектов',
+    orderNow: 'Заказать сейчас',
+    viewWork: 'Посмотреть работы',
+
     // Hero Section
     heroTitle1: 'Создаем',
     heroTitle2: 'веб-решения',
@@ -872,7 +909,6 @@ const translations = {
 
     // Buttons
     detailsButton: 'Детали',
-    orderNow: 'Заказать сейчас',
 
     // Contact Form
     contactTitle: 'Свяжитесь с нами',

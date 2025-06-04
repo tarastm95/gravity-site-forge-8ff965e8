@@ -9,21 +9,21 @@ const HeroSlider: React.FC = () => {
 
   const slides = [
     {
-      title: "Створюємо веб-рішення майбутнього",
-      subtitle: "Ми розробляємо сучасні веб-сайти та додатки, що допомагають вашому бізнесу досягати нових висот",
-      highlight: "🚀 Акція: Знижка 50% на всі послуги!",
+      title: t('heroSlide1Title'),
+      subtitle: t('heroSlide1Subtitle'),
+      highlight: t('heroSlide1Highlight'),
       bgGradient: "from-blue-600 to-purple-700"
     },
     {
-      title: "Професійний дизайн та розробка",
-      subtitle: "Індивідуальний підхід до кожного проекту з використанням найсучасніших технологій",
-      highlight: "💡 Безкоштовна консультація",
+      title: t('heroSlide2Title'),
+      subtitle: t('heroSlide2Subtitle'),
+      highlight: t('heroSlide2Highlight'),
       bgGradient: "from-purple-600 to-pink-700"
     },
     {
-      title: "Ваш успіх - наш пріоритет",
-      subtitle: "Створюємо рішення, які приносять реальні результати та збільшують ваші продажі",
-      highlight: "⚡ Швидка реалізація проектів",
+      title: t('heroSlide3Title'),
+      subtitle: t('heroSlide3Subtitle'),
+      highlight: t('heroSlide3Highlight'),
       bgGradient: "from-indigo-600 to-blue-700"
     }
   ];
@@ -86,13 +86,13 @@ const HeroSlider: React.FC = () => {
               onClick={() => scrollToSection('contact')}
               className="bg-white text-gray-900 text-lg px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl font-semibold"
             >
-              Замовити зараз
+              {t('orderNow')}
             </button>
             <button 
               onClick={() => scrollToSection('portfolio')}
               className="border-2 border-white text-white text-lg px-8 py-4 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
             >
-              Переглянути роботи
+              {t('viewWork')}
             </button>
           </div>
         </div>
