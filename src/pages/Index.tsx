@@ -1,5 +1,6 @@
 
 import React from 'react';
+import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -16,6 +17,7 @@ import Footer from '../components/Footer';
 const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900">
+      <SEO />
       <Header />
       <main>
         <Hero />
