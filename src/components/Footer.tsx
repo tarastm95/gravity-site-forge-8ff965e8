@@ -109,6 +109,10 @@ const Footer: React.FC = () => {
                 <p className="text-gray-400 text-sm">{t('emailLabel')}:</p>
                 <p className="text-white">{t('footerEmail')}</p>
               </div>
+              <div>
+                <p className="text-gray-400 text-sm">{t('workingHours')}:</p>
+                <p className="text-white">{t('workingHours')}</p>
+              </div>
               
               {/* Social Media */}
               <div className="flex space-x-3 mt-4">
