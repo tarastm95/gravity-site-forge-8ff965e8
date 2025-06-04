@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -16,38 +15,39 @@ const Calculator: React.FC = () => {
   const [cost, setCost] = useState(0);
 
   const projectTypes = {
-    landing: { name: t('landingPage'), base: 500 },
-    corporate: { name: t('corporateWebsite'), base: 1200 },
-    store: { name: t('onlineStore'), base: 2500 },
-    education: { name: t('educationalPlatform'), base: 3500 },
-    portfolio: { name: t('portfolioSite'), base: 800 },
-    media: { name: t('mediaPortal'), base: 4000 }
+    landing: { name: t('landingPage'), base: 12000 },
+    corporate: { name: t('corporateWebsite'), base: 25000 },
+    store: { name: t('onlineStore'), base: 45000 },
+    education: { name: t('educationalPlatform'), base: 55000 },
+    portfolio: { name: t('portfolioSite'), base: 18000 },
+    media: { name: t('mediaPortal'), base: 60000 }
   };
 
   const complexityMultipliers = {
-    simple: { name: t('simple'), multiplier: 1 },
-    medium: { name: t('medium'), multiplier: 1.5 },
-    complex: { name: t('complex'), multiplier: 2.5 }
+    simple: { name: t('simple'), multiplier: 0.8 },
+    medium: { name: t('medium'), multiplier: 1 },
+    complex: { name: t('complex'), multiplier: 1.2 }
   };
 
   const availableFeatures = [
-    { id: 'cms', name: t('cms'), price: 300 },
-    { id: 'seo', name: t('seo'), price: 200 },
-    { id: 'analytics', name: t('analytics'), price: 150 },
-    { id: 'multilingual', name: t('multilingual'), price: 400 }
+    { id: 'cms', name: t('cms'), price: 5000 },
+    { id: 'seo', name: t('seo'), price: 3000 },
+    { id: 'analytics', name: t('analytics'), price: 2000 },
+    { id: 'multilingual', name: t('multilingual'), price: 8000 }
   ];
 
   const calculateCost = () => {
     let baseCost = projectTypes[projectType].base;
     baseCost *= complexityMultipliers[complexity].multiplier;
-    baseCost += (pages - 1) * 100;
+    baseCost += (pages - 1) * 1500;
     
     const featuresPrice = features.reduce((sum, featureId) => {
       const feature = availableFeatures.find(f => f.id === featureId);
       return sum + (feature?.price || 0);
     }, 0);
 
-    setCost(baseCost + featuresPrice);
+    const totalCost = Math.min(baseCost + featuresPrice, 60000);
+    setCost(Math.round(totalCost));
   };
 
   const toggleFeature = (featureId: string) => {
@@ -150,7 +150,7 @@ const Calculator: React.FC = () => {
                           className="w-5 h-5 text-blue-600 rounded focus:ring-blue-500"
                         />
                         <span className="text-gray-300">{feature.name}</span>
-                        <span className="text-blue-400">+${feature.price}</span>
+                        <span className="text-blue-400">+{feature.price.toLocaleString()} грн</span>
                       </label>
                     ))}
                   </div>
@@ -165,7 +165,7 @@ const Calculator: React.FC = () => {
                 </h3>
                 {cost > 0 && (
                   <div className="text-4xl font-bold text-white mb-4">
-                    {t('from')} ${cost.toLocaleString()} {t('usd')}
+                    {t('from')} {cost.toLocaleString()} грн
                   </div>
                 )}
                 <Button
@@ -176,6 +176,9 @@ const Calculator: React.FC = () => {
                 </Button>
                 <p className="text-blue-100 text-sm mt-4">
                   {t('calculatorDisclaimer')}
+                </p>
+                <p className="text-blue-200 text-xs mt-2">
+                  Максимальна вартість: 60,000 грн
                 </p>
               </div>
             </div>
