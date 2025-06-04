@@ -32,7 +32,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, isLarge = true }) =>
       '3': t('landingPageTitle'),
       '4': t('corporateWebsiteTitle'),
       '5': t('portfolioSiteTitle'),
-      '6': t('mediaPortalTitle')
+      '6': t('mediaPortalTitle'),
+      '7': t('logoDesignTitle'),
+      '8': t('printDesignTitle'),
+      '9': t('bannerDesignTitle'),
+      '10': t('redesignTitle')
     };
     return titleMap[serviceId] || service.title;
   };
@@ -44,7 +48,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, isLarge = true }) =>
       '3': t('landingPageDescription'),
       '4': t('corporateWebsiteDescription'),
       '5': t('portfolioSiteDescription'),
-      '6': t('mediaPortalDescription')
+      '6': t('mediaPortalDescription'),
+      '7': t('logoDesignDescription'),
+      '8': t('printDesignDescription'),
+      '9': t('bannerDesignDescription'),
+      '10': t('redesignDescription')
     };
     return descriptionMap[serviceId] || service.description;
   };
