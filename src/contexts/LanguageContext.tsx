@@ -267,6 +267,93 @@ const translations = {
     corporateWebsitePageTitle: 'Корпоративний сайт - Gravity Team',
     portfolioSitePageTitle: 'Сайт-портфоліо - Gravity Team',
     mediaPortalPageTitle: 'Медіа-портал - Gravity Team',
+
+    // Service Detail specific
+    serviceNotFound: 'Послугу не знайдено',
+    backToHome: 'Повернутися на головну',
+    backButton: 'Повернутися назад',
+    completedProjects: 'Завершених проектів',
+    averageConversion: 'Середня конверсія',
+    averageDevelopmentTime: 'Середній час розробки',
+    whatIsIncluded: 'Що входить в послугу?',
+    howItWorks: 'Як проходить робота?',
+    clientReviews: 'Відгуки клієнтів',
+    readyToStart: 'Готові розпочати проект?',
+    contactUsNow: 'Зв\'яжіться з нами прямо зараз та отримайте безкоштовну консультацію про ваш майбутній проект',
+
+    // Process steps
+    processStep1Title: 'Аналіз',
+    processStep1Desc: 'Вивчаємо ваші потреби та цілі',
+    processStep2Title: 'Планування',
+    processStep2Desc: 'Створюємо детальний план проекту',
+    processStep3Title: 'Розробка',
+    processStep3Desc: 'Втілюємо ідеї в реальність',
+    processStep4Title: 'Запуск',
+    processStep4Desc: 'Тестуємо та запускаємо проект',
+
+    // Time periods
+    days25: '25 днів',
+    days35: '35 днів',
+    days7: '7 днів',
+    days14: '14 днів',
+    days10: '10 днів',
+    days30: '30 днів',
+
+    // Reviews
+    reviewerName1: 'Олексій Петренко',
+    reviewerCompany1: 'ТОВ "Технології майбутнього"',
+    reviewText1: 'Чудовий результат! Наш сайт працює швидко та приносить нових клієнтів щодня.',
+    reviewerName2: 'Марія Іваненко',
+    reviewerCompany2: 'Студія дизайну "Креатив"',
+    reviewText2: 'Професійна команда, дотримання термінів та якісний результат. Рекомендую!',
+
+    // Service features - Online Store
+    feature1_1: 'Адаптивний дизайн для всіх пристроїв',
+    feature1_2: 'Інтеграція з платіжними системами',
+    feature1_3: 'Система управління товарами',
+    feature1_4: 'SEO оптимізація',
+    feature1_5: 'Підтримка кількох мов',
+    feature1_6: 'Аналітика та звіти',
+
+    // Service features - Educational Platform
+    feature2_1: 'Відеоплеєр з підтримкою HD',
+    feature2_2: 'Система тестів та завдань',
+    feature2_3: 'Особисті кабінети студентів',
+    feature2_4: 'Сертифікати після завершення',
+    feature2_5: 'Форум для обговорень',
+    feature2_6: 'Мобільний додаток',
+
+    // Service features - Landing Page
+    feature3_1: 'Швидке завантаження (до 3 сек)',
+    feature3_2: 'Форма збору контактів',
+    feature3_3: 'Інтеграція з CRM',
+    feature3_4: 'A/B тестування',
+    feature3_5: 'Аналітика конверсій',
+    feature3_6: 'Чат-бот підтримка',
+
+    // Service features - Corporate Website
+    feature4_1: 'CMS для легкого редагування',
+    feature4_2: 'Багаторівневе меню',
+    feature4_3: 'Галерея проектів',
+    feature4_4: 'Блог система',
+    feature4_5: 'Контактні форми',
+    feature4_6: 'Google Maps інтеграція',
+
+    // Service features - Portfolio Site
+    feature5_1: 'Галерея робіт',
+    feature5_2: 'Контактна інформація',
+    feature5_3: 'Соціальні мережі',
+    feature5_4: 'Завантаження резюме',
+    feature5_5: 'Блог/новини',
+    feature5_6: 'Відгуки клієнтів',
+
+    // Service features - Media Portal
+    feature6_1: 'Система публікацій',
+    feature6_2: 'Коментарі користувачів',
+    feature6_3: 'Рекламні блоки',
+    feature6_4: 'Розсилка новин',
+    feature6_5: 'Соціальні мережі',
+    feature6_6: 'Пошук по сайту',
   },
   en: {
     // Hero Section
@@ -526,6 +613,93 @@ const translations = {
     corporateWebsitePageTitle: 'Corporate Website - Gravity Team',
     portfolioSitePageTitle: 'Portfolio Site - Gravity Team',
     mediaPortalPageTitle: 'Media Portal - Gravity Team',
+
+    // Service Detail specific
+    serviceNotFound: 'Service not found',
+    backToHome: 'Back to Home',
+    backButton: 'Go back',
+    completedProjects: 'Completed projects',
+    averageConversion: 'Average conversion',
+    averageDevelopmentTime: 'Average development time',
+    whatIsIncluded: 'What\'s included in the service?',
+    howItWorks: 'How does it work?',
+    clientReviews: 'Client reviews',
+    readyToStart: 'Ready to start a project?',
+    contactUsNow: 'Contact us now and get a free consultation about your future project',
+
+    // Process steps
+    processStep1Title: 'Analysis',
+    processStep1Desc: 'We study your needs and goals',
+    processStep2Title: 'Planning',
+    processStep2Desc: 'We create a detailed project plan',
+    processStep3Title: 'Development',
+    processStep3Desc: 'We bring ideas to reality',
+    processStep4Title: 'Launch',
+    processStep4Desc: 'We test and launch the project',
+
+    // Time periods
+    days25: '25 days',
+    days35: '35 days',
+    days7: '7 days',
+    days14: '14 days',
+    days10: '10 days',
+    days30: '30 days',
+
+    // Reviews
+    reviewerName1: 'Alex Petrenko',
+    reviewerCompany1: 'Future Technologies LLC',
+    reviewText1: 'Excellent result! Our website works fast and brings new clients every day.',
+    reviewerName2: 'Maria Ivanenko',
+    reviewerCompany2: 'Creative Design Studio',
+    reviewText2: 'Professional team, meeting deadlines and quality results. Highly recommend!',
+
+    // Service features - Online Store
+    feature1_1: 'Responsive design for all devices',
+    feature1_2: 'Payment system integration',
+    feature1_3: 'Product management system',
+    feature1_4: 'SEO optimization',
+    feature1_5: 'Multi-language support',
+    feature1_6: 'Analytics and reports',
+
+    // Service features - Educational Platform
+    feature2_1: 'HD video player support',
+    feature2_2: 'Test and assignment system',
+    feature2_3: 'Student personal accounts',
+    feature2_4: 'Completion certificates',
+    feature2_5: 'Discussion forum',
+    feature2_6: 'Mobile application',
+
+    // Service features - Landing Page
+    feature3_1: 'Fast loading (up to 3 sec)',
+    feature3_2: 'Contact collection form',
+    feature3_3: 'CRM integration',
+    feature3_4: 'A/B testing',
+    feature3_5: 'Conversion analytics',
+    feature3_6: 'Chatbot support',
+
+    // Service features - Corporate Website
+    feature4_1: 'CMS for easy editing',
+    feature4_2: 'Multi-level menu',
+    feature4_3: 'Project gallery',
+    feature4_4: 'Blog system',
+    feature4_5: 'Contact forms',
+    feature4_6: 'Google Maps integration',
+
+    // Service features - Portfolio Site
+    feature5_1: 'Work gallery',
+    feature5_2: 'Contact information',
+    feature5_3: 'Social networks',
+    feature5_4: 'Resume download',
+    feature5_5: 'Blog/news',
+    feature5_6: 'Client reviews',
+
+    // Service features - Media Portal
+    feature6_1: 'Publication system',
+    feature6_2: 'User comments',
+    feature6_3: 'Advertising blocks',
+    feature6_4: 'Newsletter',
+    feature6_5: 'Social networks',
+    feature6_6: 'Site search',
   },
   ru: {
     // Hero Section
@@ -785,6 +959,93 @@ const translations = {
     corporateWebsitePageTitle: 'Корпоративный сайт - Gravity Team',
     portfolioSitePageTitle: 'Сайт-портфолио - Gravity Team',
     mediaPortalPageTitle: 'Медиа-портал - Gravity Team',
+
+    // Service Detail specific
+    serviceNotFound: 'Услуга не найдена',
+    backToHome: 'Вернуться на главную',
+    backButton: 'Вернуться назад',
+    completedProjects: 'Завершенных проектов',
+    averageConversion: 'Средняя конверсия',
+    averageDevelopmentTime: 'Среднее время разработки',
+    whatIsIncluded: 'Что входит в услугу?',
+    howItWorks: 'Как проходит работа?',
+    clientReviews: 'Отзывы клиентов',
+    readyToStart: 'Готовы начать проект?',
+    contactUsNow: 'Свяжитесь с нами прямо сейчас и получите бесплатную консультацию о вашем будущем проекте',
+
+    // Process steps
+    processStep1Title: 'Анализ',
+    processStep1Desc: 'Изучаем ваши потребности и цели',
+    processStep2Title: 'Планирование',
+    processStep2Desc: 'Создаем детальный план проекта',
+    processStep3Title: 'Разработка',
+    processStep3Desc: 'Воплощаем идеи в реальность',
+    processStep4Title: 'Запуск',
+    processStep4Desc: 'Тестируем и запускаем проект',
+
+    // Time periods
+    days25: '25 дней',
+    days35: '35 дней',
+    days7: '7 дней',
+    days14: '14 дней',
+    days10: '10 дней',
+    days30: '30 дней',
+
+    // Reviews
+    reviewerName1: 'Алексей Петренко',
+    reviewerCompany1: 'ООО "Технологии будущего"',
+    reviewText1: 'Прекрасный результат! Наш сайт работает быстро и приносит новых клиентов каждый день.',
+    reviewerName2: 'Мария Иваненко',
+    reviewerCompany2: 'Студия дизайна "Креатив"',
+    reviewText2: 'Профессиональная команда, соблюдение сроков и качественный результат. Рекомендую!',
+
+    // Service features - Online Store
+    feature1_1: 'Адаптивный дизайн для всех устройств',
+    feature1_2: 'Интеграция с платежными системами',
+    feature1_3: 'Система управления товарами',
+    feature1_4: 'SEO оптимизация',
+    feature1_5: 'Поддержка нескольких языков',
+    feature1_6: 'Аналитика и отчеты',
+
+    // Service features - Educational Platform
+    feature2_1: 'Видеоплеер с поддержкой HD',
+    feature2_2: 'Система тестов и заданий',
+    feature2_3: 'Личные кабинеты студентов',
+    feature2_4: 'Сертификаты после завершения',
+    feature2_5: 'Форум для обсуждений',
+    feature2_6: 'Мобильное приложение',
+
+    // Service features - Landing Page
+    feature3_1: 'Быстрая загрузка (до 3 сек)',
+    feature3_2: 'Форма сбора контактов',
+    feature3_3: 'Интеграция с CRM',
+    feature3_4: 'A/B тестирование',
+    feature3_5: 'Аналитика конверсий',
+    feature3_6: 'Чат-бот поддержка',
+
+    // Service features - Corporate Website
+    feature4_1: 'CMS для легкого редактирования',
+    feature4_2: 'Многоуровневое меню',
+    feature4_3: 'Галерея проектов',
+    feature4_4: 'Блог система',
+    feature4_5: 'Контактные формы',
+    feature4_6: 'Интеграция Google Maps',
+
+    // Service features - Portfolio Site
+    feature5_1: 'Галерея работ',
+    feature5_2: 'Контактная информация',
+    feature5_3: 'Социальные сети',
+    feature5_4: 'Загрузка резюме',
+    feature5_5: 'Блог/новости',
+    feature5_6: 'Отзывы клиентов',
+
+    // Service features - Media Portal
+    feature6_1: 'Система публикаций',
+    feature6_2: 'Комментарии пользователей',
+    feature6_3: 'Рекламные блоки',
+    feature6_4: 'Рассылка новостей',
+    feature6_5: 'Социальные сети',
+    feature6_6: 'Поиск по сайту',
   }
 };
 

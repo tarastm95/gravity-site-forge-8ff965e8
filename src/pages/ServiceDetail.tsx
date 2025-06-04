@@ -19,12 +19,12 @@ const ServiceDetail: React.FC = () => {
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl text-white mb-4">Послугу не знайдено</h1>
+          <h1 className="text-2xl text-white mb-4">{t('serviceNotFound')}</h1>
           <button 
             onClick={() => navigate('/')}
             className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors"
           >
-            Повернутися на головну
+            {t('backToHome')}
           </button>
         </div>
       </div>
@@ -44,52 +44,52 @@ const ServiceDetail: React.FC = () => {
   const getServiceFeatures = (serviceId: string) => {
     const features = {
       '1': [
-        'Адаптивний дизайн для всіх пристроїв',
-        'Інтеграція з платіжними системами',
-        'Система управління товарами',
-        'SEO оптимізація',
-        'Підтримка кількох мов',
-        'Аналітика та звіти'
+        t('feature1_1'),
+        t('feature1_2'),
+        t('feature1_3'),
+        t('feature1_4'),
+        t('feature1_5'),
+        t('feature1_6')
       ],
       '2': [
-        'Відеоплеєр з підтримкою HD',
-        'Система тестів та завдань',
-        'Особисті кабінети студентів',
-        'Сертифікати після завершення',
-        'Форум для обговорень',
-        'Мобільний додаток'
+        t('feature2_1'),
+        t('feature2_2'),
+        t('feature2_3'),
+        t('feature2_4'),
+        t('feature2_5'),
+        t('feature2_6')
       ],
       '3': [
-        'Швидке завантаження (до 3 сек)',
-        'Форма збору контактів',
-        'Інтеграція з CRM',
-        'A/B тестування',
-        'Аналітика конверсій',
-        'Чат-бот підтримка'
+        t('feature3_1'),
+        t('feature3_2'),
+        t('feature3_3'),
+        t('feature3_4'),
+        t('feature3_5'),
+        t('feature3_6')
       ],
       '4': [
-        'CMS для легкого редагування',
-        'Багаторівневе меню',
-        'Галерея проектів',
-        'Блог система',
-        'Контактні форми',
-        'Google Maps інтеграція'
+        t('feature4_1'),
+        t('feature4_2'),
+        t('feature4_3'),
+        t('feature4_4'),
+        t('feature4_5'),
+        t('feature4_6')
       ],
       '5': [
-        'Галерея робіт',
-        'Контактна інформація',
-        'Соціальні мережі',
-        'Завантаження резюме',
-        'Блог/новини',
-        'Відгуки клієнтів'
+        t('feature5_1'),
+        t('feature5_2'),
+        t('feature5_3'),
+        t('feature5_4'),
+        t('feature5_5'),
+        t('feature5_6')
       ],
       '6': [
-        'Система публікацій',
-        'Коментарі користувачів',
-        'Рекламні блоки',
-        'Розсилка новин',
-        'Соціальні мережі',
-        'Пошук по сайту'
+        t('feature6_1'),
+        t('feature6_2'),
+        t('feature6_3'),
+        t('feature6_4'),
+        t('feature6_5'),
+        t('feature6_6')
       ]
     };
     return features[serviceId] || [];
@@ -97,14 +97,14 @@ const ServiceDetail: React.FC = () => {
 
   const getServiceStats = (serviceId: string) => {
     const stats = {
-      '1': { projects: '150+', conversion: '12%', avgTime: '25 днів' },
-      '2': { projects: '45+', conversion: '89%', avgTime: '35 днів' },
-      '3': { projects: '300+', conversion: '28%', avgTime: '7 днів' },
-      '4': { projects: '200+', conversion: '15%', avgTime: '14 днів' },
-      '5': { projects: '120+', conversion: '22%', avgTime: '10 днів' },
-      '6': { projects: '80+', conversion: '18%', avgTime: '30 днів' }
+      '1': { projects: '150+', conversion: '12%', avgTime: t('days25') },
+      '2': { projects: '45+', conversion: '89%', avgTime: t('days35') },
+      '3': { projects: '300+', conversion: '28%', avgTime: t('days7') },
+      '4': { projects: '200+', conversion: '15%', avgTime: t('days14') },
+      '5': { projects: '120+', conversion: '22%', avgTime: t('days10') },
+      '6': { projects: '80+', conversion: '18%', avgTime: t('days30') }
     };
-    return stats[serviceId] || { projects: '50+', conversion: '20%', avgTime: '14 днів' };
+    return stats[serviceId] || { projects: '50+', conversion: '20%', avgTime: t('days14') };
   };
 
   const features = getServiceFeatures(service.id);
@@ -127,7 +127,7 @@ const ServiceDetail: React.FC = () => {
             className="flex items-center gap-2 text-gray-300 hover:text-white mb-8 transition-colors"
           >
             <ArrowLeft size={20} />
-            Повернутися назад
+            {t('backButton')}
           </button>
 
           <div className="max-w-4xl mx-auto text-center">
@@ -171,21 +171,21 @@ const ServiceDetail: React.FC = () => {
                 <Users className="text-blue-400" size={32} />
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stats.projects}</div>
-              <div className="text-gray-300">Завершених проектів</div>
+              <div className="text-gray-300">{t('completedProjects')}</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-4">
                 <Zap className="text-purple-400" size={32} />
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stats.conversion}</div>
-              <div className="text-gray-300">Середня конверсія</div>
+              <div className="text-gray-300">{t('averageConversion')}</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-4">
                 <Clock className="text-green-400" size={32} />
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stats.avgTime}</div>
-              <div className="text-gray-300">Середній час розробки</div>
+              <div className="text-gray-300">{t('averageDevelopmentTime')}</div>
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@ const ServiceDetail: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-              Що входить в послугу?
+              {t('whatIsIncluded')}
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -219,15 +219,15 @@ const ServiceDetail: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-              Як проходить робота?
+              {t('howItWorks')}
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
-                { step: '01', title: 'Аналіз', desc: 'Вивчаємо ваші потреби та цілі' },
-                { step: '02', title: 'Планування', desc: 'Створюємо детальний план проекту' },
-                { step: '03', title: 'Розробка', desc: 'Втілюємо ідеї в реальність' },
-                { step: '04', title: 'Запуск', desc: 'Тестуємо та запускаємо проект' }
+                { step: '01', title: t('processStep1Title'), desc: t('processStep1Desc') },
+                { step: '02', title: t('processStep2Title'), desc: t('processStep2Desc') },
+                { step: '03', title: t('processStep3Title'), desc: t('processStep3Desc') },
+                { step: '04', title: t('processStep4Title'), desc: t('processStep4Desc') }
               ].map((item, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
@@ -247,21 +247,21 @@ const ServiceDetail: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-              Відгуки клієнтів
+              {t('clientReviews')}
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
-                  name: 'Олексій Петренко',
-                  company: 'ТОВ "Технології майбутнього"',
-                  text: 'Чудовий результат! Наш сайт працює швидко та приносить нових клієнтів щодня.',
+                  name: t('reviewerName1'),
+                  company: t('reviewerCompany1'),
+                  text: t('reviewText1'),
                   rating: 5
                 },
                 {
-                  name: 'Марія Іваненко', 
-                  company: 'Студія дизайну "Креатив"',
-                  text: 'Професійна команда, дотримання термінів та якісний результат. Рекомендую!',
+                  name: t('reviewerName2'), 
+                  company: t('reviewerCompany2'),
+                  text: t('reviewText2'),
                   rating: 5
                 }
               ].map((review, index) => (
@@ -287,16 +287,16 @@ const ServiceDetail: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Готові розпочати проект?
+            {t('readyToStart')}
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Зв'яжіться з нами прямо зараз та отримайте безкоштовну консультацію про ваш майбутній проект
+            {t('contactUsNow')}
           </p>
           <button 
             onClick={() => scrollToSection('contact')}
             className="bg-white text-blue-600 text-lg px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 font-semibold"
           >
-            Розпочати проект
+            {t('startProject')}
           </button>
         </div>
       </section>
