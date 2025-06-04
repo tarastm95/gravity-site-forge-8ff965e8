@@ -95,19 +95,19 @@ const Footer: React.FC = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">{t('contacts')}</h3>
+            <h3 className="text-white font-bold text-lg mb-4">{t('contactInfo')}</h3>
             <div className="space-y-3">
               <div>
                 <p className="text-gray-400 text-sm">{t('address')}:</p>
-                <p className="text-white">{t('footerAddress')}</p>
+                <p className="text-white">{t('contactAddress')}</p>
               </div>
               <div>
                 <p className="text-gray-400 text-sm">{t('phoneLabel')}:</p>
-                <p className="text-white">{t('footerPhone')}</p>
+                <p className="text-white">{t('contactPhone')}</p>
               </div>
               <div>
                 <p className="text-gray-400 text-sm">{t('emailLabel')}:</p>
-                <p className="text-white">{t('footerEmail')}</p>
+                <p className="text-white">{t('contactEmail')}</p>
               </div>
               <div>
                 <p className="text-gray-400 text-sm">{t('workingHoursLabel')}:</p>
