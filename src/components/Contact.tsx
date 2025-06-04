@@ -1,9 +1,11 @@
 
 import React, { useState } from 'react';
 import { useToast } from '../hooks/use-toast';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact: React.FC = () => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -59,10 +61,10 @@ const Contact: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Зв'яжіться з нами
+              {t('contactTitle')}
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Будемо раді обговорити ваш проєкт! Заповніть форму або скористайтесь контактами нижче.
+              {t('contactSubtitle')}
             </p>
           </div>
 
@@ -70,13 +72,13 @@ const Contact: React.FC = () => {
             {/* Contact Form */}
             <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6">
-                Надіслати повідомлення
+                {t('sendMessage')}
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-gray-300 mb-2">
-                    Ім'я *
+                    {t('nameLabel')} *
                   </label>
                   <input
                     type="text"
@@ -85,14 +87,14 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
-                    placeholder="Ваше ім'я"
+                    placeholder={t('namePlaceholder')}
                     required
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-gray-300 mb-2">
-                    Email *
+                    {t('emailLabel')} *
                   </label>
                   <input
                     type="email"
@@ -101,14 +103,14 @@ const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
-                    placeholder="your@email.com"
+                    placeholder={t('emailPlaceholder')}
                     required
                   />
                 </div>
 
                 <div>
                   <label htmlFor="phone" className="block text-gray-300 mb-2">
-                    Телефон
+                    {t('phoneLabel')}
                   </label>
                   <input
                     type="tel"
@@ -117,13 +119,13 @@ const Contact: React.FC = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
-                    placeholder="+38 (0xx) xxx-xx-xx"
+                    placeholder={t('phonePlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-gray-300 mb-2">
-                    Повідомлення *
+                    {t('messageLabel')} *
                   </label>
                   <textarea
                     id="message"
@@ -132,7 +134,7 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     rows={5}
                     className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
-                    placeholder="Розкажіть про ваш проєкт..."
+                    placeholder={t('messagePlaceholder')}
                     required
                   ></textarea>
                 </div>
@@ -141,7 +143,7 @@ const Contact: React.FC = () => {
                   type="submit"
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-medium"
                 >
-                  Відправити
+                  {t('sendButton')}
                 </button>
               </form>
             </div>
@@ -150,31 +152,31 @@ const Contact: React.FC = () => {
             <div className="space-y-8">
               <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700">
                 <h3 className="text-2xl font-bold text-white mb-6">
-                  Контактна інформація
+                  {t('contactInfo')}
                 </h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="text-2xl mr-4">📧</div>
                     <div>
-                      <h4 className="text-white font-medium mb-1">Email</h4>
-                      <p className="text-gray-300">info@gravityteam.ua</p>
+                      <h4 className="text-white font-medium mb-1">{t('emailLabel')}</h4>
+                      <p className="text-gray-300">{t('contactEmail')}</p>
                     </div>
                   </div>
 
                   <div className="flex items-start">
                     <div className="text-2xl mr-4">📞</div>
                     <div>
-                      <h4 className="text-white font-medium mb-1">Телефон</h4>
-                      <p className="text-gray-300">+38 (044) 123-45-67</p>
+                      <h4 className="text-white font-medium mb-1">{t('phoneLabel')}</h4>
+                      <p className="text-gray-300">{t('contactPhone')}</p>
                     </div>
                   </div>
 
                   <div className="flex items-start">
                     <div className="text-2xl mr-4">📍</div>
                     <div>
-                      <h4 className="text-white font-medium mb-1">Адреса</h4>
-                      <p className="text-gray-300">м. Київ, вул. Хрещатик, 1</p>
+                      <h4 className="text-white font-medium mb-1">{t('address')}</h4>
+                      <p className="text-gray-300">{t('contactAddress')}</p>
                     </div>
                   </div>
 
@@ -182,7 +184,7 @@ const Contact: React.FC = () => {
                     <div className="text-2xl mr-4">⏰</div>
                     <div>
                       <h4 className="text-white font-medium mb-1">Режим роботи</h4>
-                      <p className="text-gray-300">24/7 підтримка</p>
+                      <p className="text-gray-300">{t('workingHours')}</p>
                     </div>
                   </div>
                 </div>
@@ -190,7 +192,7 @@ const Contact: React.FC = () => {
 
               <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700">
                 <h3 className="text-xl font-bold text-white mb-4">
-                  Слідкуйте за нами
+                  {t('followUs')}
                 </h3>
                 
                 <div className="flex space-x-4">
