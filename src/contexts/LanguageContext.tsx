@@ -76,6 +76,26 @@ const translations = {
     
     mediaPortalTitle: 'Медіа-портал / Сервісний сайт',
     mediaPortalDescription: 'Платформа з редакційною системою: публікація статей, новин, відео, флоти із рекламними блоками. Інтеграція з CRM та API.',
+
+    // Additional Services
+    logoDesignTitle: 'Логотип',
+    logoDesignDescription: 'Розробка логотипу з унікальною ідеєю, адаптивного до всіх носіїв: від візиток до сайту.',
+    
+    printDesignTitle: 'Візитки, буклети, флаєри',
+    printDesignDescription: 'Дизайн поліграфії: від макету до готового файлу для друку. Підтримка всіх популярних форматів.',
+    
+    bannerDesignTitle: 'Банери, презентації (дизайн)',
+    bannerDesignDescription: 'Створення банерів для сайтів, соцмереж, а також слайдів-презентацій у PowerPoint/Keynote.',
+    
+    redesignTitle: 'Редизайн сайту',
+    redesignDescription: 'Повне оновлення візуальної частини та архітектури: адаптивність, оптимізація швидкості, сучасні UI/UX-практики.',
+    
+    // Portfolio section
+    portfolioTitle: 'Наше портфоліо',
+    portfolioSubtitle: 'Переглянуте наші найкращі роботи - від лендінгів до складних веб-платформ',
+    portfolioCTA: 'Готові створити щось подібне?',
+    portfolioCTAText: 'Давайте обговоримо ваш проект та створимо щось унікальне разом',
+    startProject: 'Почати проект',
     
     // Calculator
     projectType: 'Тип проекту',
@@ -110,11 +130,20 @@ const translations = {
     // Testimonials
     testimonialsTitle: 'Що про нас кажуть',
     testimonialsSubtitle: 'Відгуки наших клієнтів — найкраща реклама нашої роботи',
+    testimonial1Text: 'Gravity Team воістину професіонали: упродовж місяця створили для нас повноцінний інтернет-магазин, інтегрували CMS і платіжні системи. Результат — +40% продажів уже за перший квартал.',
+    testimonial1Name: 'Ірина Петренко',
+    testimonial1Position: 'CEO Fashion.ua',
+    testimonial2Text: 'Освітня платформа, яку розробила команда Gravity, перевершила всі наші очікування. Інтуїтивний інтерфейс, стабільна робота та відмінна підтримка. Рекомендую!',
+    testimonial2Name: 'Олександр Коваленко',
+    testimonial2Position: 'Засновник EdTech Hub',
+    testimonial3Text: 'З 2019 року команда Gravity Team — наш незмінний партнер із веб-розробки. Вони довели, що можуть забезпечувати високу якість та дотримуватися термінів.',
+    testimonial3Name: 'Марія Сидоренко',
+    testimonial3Position: 'Маркетинг-директор StartupX',
     
     // Join Team
     joinTeamTitle: 'Приєднуйтесь до',
     joinTeamSubtitle: 'Gravity Team',
-    joinTeamDescription: 'Шукаєш місце, де твої ідеї стануть реальністю? Ми постійно відкриті до талановитих девелоперів, дизайнерів і маркетологів. Надсилай своє резюме!',
+    joinTeamDescription: 'Шукаєте місце, де твої ідеї стануть реальністю? Ми постійно відкриті до талановитих девелоперів, дизайнерів і маркетологів. Надсилай своє резюме!',
     developers: 'Розробники',
     designers: 'Дизайнери',
     marketers: 'Маркетологи',
@@ -125,6 +154,46 @@ const translations = {
     careerGrowth: 'Можливість професійного зростання',
     sendResume: 'Надіслати резюме',
     viewVacancies: 'Переглянути вакансії',
+    
+    // Contact section
+    contactTitle: 'Зв\'яжіться з нами',
+    contactSubtitle: 'Будемо раді обговорити ваш проєкт! Заповніть форму або скористайтесь контактами нижче.',
+    sendMessage: 'Надіслати повідомлення',
+    nameLabel: 'Ім\'я',
+    namePlaceholder: 'Ваше ім\'я',
+    emailLabel: 'Email',
+    emailPlaceholder: 'your@email.com',
+    phoneLabel: 'Телефон',
+    phonePlaceholder: '+38 (0xx) xxx-xx-xx',
+    messageLabel: 'Повідомлення',
+    messagePlaceholder: 'Розкажіть про ваш проєкт...',
+    sendButton: 'Відправити',
+    contactInfo: 'Контактна інформація',
+    contactEmail: 'info@gravityteam.ua',
+    contactPhone: '+38 (044) 123-45-67',
+    contactAddress: 'м. Київ, вул. Хрещатик, 1',
+    workingHours: '24/7 підтримка',
+    followUs: 'Слідкуйте за нами',
+    
+    // Footer
+    servicesFooter: 'Послуги',
+    companyFooter: 'Компанія',
+    helpFooter: 'Допомога',
+    contactsFooter: 'Контакти',
+    aboutUs: 'Про нас',
+    vacancies: 'Вакансії',
+    blog: 'Блог',
+    support: 'Підтримка',
+    privacyPolicy: 'Політика конфіденційності',
+    termsOfUse: 'Умови використання',
+    address: 'Адреса:',
+    phone: 'Телефон:',
+    email: 'Email:',
+    newsletter: 'Підпішіться на наші новини',
+    newsletterText: 'Отримуйте останні новини про тренди веб-розробки та спеціальні пропозиції',
+    emailPlaceholderFooter: 'Ваш email',
+    subscribe: 'Підписатися',
+    copyright: '© 2025 Gravity Team — Усі права захищені.',
     
     // FAQ
     faqTitle: 'Часто задавані питання',
@@ -208,6 +277,26 @@ const translations = {
     mediaPortalTitle: 'Media Portal / Service Website',
     mediaPortalDescription: 'Platform with editorial system: publishing articles, news, videos, feeds with advertising blocks. CRM and API integration.',
     
+    // Additional Services
+    logoDesignTitle: 'Logo Design',
+    logoDesignDescription: 'Unique logo design adapted for all media: from business cards to websites.',
+    
+    printDesignTitle: 'Business Cards, Brochures, Flyers',
+    printDesignDescription: 'Print design: from layout to print-ready files. Support for all popular formats.',
+    
+    bannerDesignTitle: 'Banners, Presentations (Design)',
+    bannerDesignDescription: 'Creating banners for websites, social media, and presentation slides in PowerPoint/Keynote.',
+    
+    redesignTitle: 'Website Redesign',
+    redesignDescription: 'Complete visual and architecture update: responsiveness, speed optimization, modern UI/UX practices.',
+    
+    // Portfolio section
+    portfolioTitle: 'Our Portfolio',
+    portfolioSubtitle: 'Check out our best work - from landing pages to complex web platforms',
+    portfolioCTA: 'Ready to create something similar?',
+    portfolioCTAText: 'Let\'s discuss your project and create something unique together',
+    startProject: 'Start Project',
+    
     // Calculator
     projectType: 'Project Type',
     landingPage: 'Landing Page',
@@ -241,6 +330,15 @@ const translations = {
     // Testimonials
     testimonialsTitle: 'What they say about us',
     testimonialsSubtitle: 'Our clients\' reviews are the best advertisement for our work',
+    testimonial1Text: 'Gravity Team are true professionals: within a month they created a full-fledged online store for us, integrated CMS and payment systems. Result — +40% sales in the first quarter.',
+    testimonial1Name: 'Iryna Petrenko',
+    testimonial1Position: 'CEO Fashion.ua',
+    testimonial2Text: 'The educational platform developed by the Gravity team exceeded all our expectations. Intuitive interface, stable operation and excellent support. Highly recommend!',
+    testimonial2Name: 'Oleksandr Kovalenko',
+    testimonial2Position: 'Founder EdTech Hub',
+    testimonial3Text: 'Since 2019, the Gravity Team has been our permanent web development partner. They have proven they can deliver high quality and meet deadlines.',
+    testimonial3Name: 'Maria Sydorenko',
+    testimonial3Position: 'Marketing Director StartupX',
     
     // Join Team
     joinTeamTitle: 'Join',
@@ -256,6 +354,46 @@ const translations = {
     careerGrowth: 'Professional growth opportunities',
     sendResume: 'Send Resume',
     viewVacancies: 'View Vacancies',
+    
+    // Contact section
+    contactTitle: 'Contact Us',
+    contactSubtitle: 'We\'d be happy to discuss your project! Fill out the form or use the contacts below.',
+    sendMessage: 'Send Message',
+    nameLabel: 'Name',
+    namePlaceholder: 'Your name',
+    emailLabel: 'Email',
+    emailPlaceholder: 'your@email.com',
+    phoneLabel: 'Phone',
+    phonePlaceholder: '+1 (xxx) xxx-xx-xx',
+    messageLabel: 'Message',
+    messagePlaceholder: 'Tell us about your project...',
+    sendButton: 'Send',
+    contactInfo: 'Contact Information',
+    contactEmail: 'info@gravityteam.ua',
+    contactPhone: '+38 (044) 123-45-67',
+    contactAddress: 'Kyiv, Khreshchatyk str., 1',
+    workingHours: '24/7 support',
+    followUs: 'Follow us',
+    
+    // Footer
+    servicesFooter: 'Services',
+    companyFooter: 'Company',
+    helpFooter: 'Help',
+    contactsFooter: 'Contacts',
+    aboutUs: 'About Us',
+    vacancies: 'Vacancies',
+    blog: 'Blog',
+    support: 'Support',
+    privacyPolicy: 'Privacy Policy',
+    termsOfUse: 'Terms of Use',
+    address: 'Address:',
+    phone: 'Phone:',
+    email: 'Email:',
+    newsletter: 'Subscribe to our newsletter',
+    newsletterText: 'Get the latest news about web development trends and special offers',
+    emailPlaceholderFooter: 'Your email',
+    subscribe: 'Subscribe',
+    copyright: '© 2025 Gravity Team — All rights reserved.',
     
     // FAQ
     faqTitle: 'Frequently Asked Questions',
@@ -339,6 +477,26 @@ const translations = {
     mediaPortalTitle: 'Медиа-портал / Сервисный сайт',
     mediaPortalDescription: 'Платформа с редакционной системой: публикация статей, новостей, видео, флоты с рекламными блоками. Интеграция с CRM и API.',
     
+    // Additional Services
+    logoDesignTitle: 'Логотип',
+    logoDesignDescription: 'Разработка логотипа с уникальной идеей, адаптивного ко всем носителям: от визиток до сайта.',
+    
+    printDesignTitle: 'Визитки, буклеты, флаеры',
+    printDesignDescription: 'Дизайн полиграфии: от макета до готового файла для печати. Поддержка всех популярных форматов.',
+    
+    bannerDesignTitle: 'Баннеры, презентации (дизайн)',
+    bannerDesignDescription: 'Создание баннеров для сайтов, соцсетей, а также слайдов-презентаций в PowerPoint/Keynote.',
+    
+    redesignTitle: 'Редизайн сайта',
+    redesignDescription: 'Полное обновление визуальной части и архитектуры: адаптивность, оптимизация скорости, современные UI/UX-практики.',
+    
+    // Portfolio section
+    portfolioTitle: 'Наше портфолио',
+    portfolioSubtitle: 'Посмотрите наши лучшие работы - от лендингов до сложных веб-платформ',
+    portfolioCTA: 'Готовы создать что-то подобное?',
+    portfolioCTAText: 'Давайте обсудим ваш проект и создадим что-то уникальное вместе',
+    startProject: 'Начать проект',
+    
     // Calculator
     projectType: 'Тип проекта',
     landingPage: 'Landing-страница',
@@ -372,6 +530,15 @@ const translations = {
     // Testimonials
     testimonialsTitle: 'Что о нас говорят',
     testimonialsSubtitle: 'Отзывы наших клиентов — лучшая реклама нашей работы',
+    testimonial1Text: 'Gravity Team истинные профессионалы: в течение месяца создали для нас полноценный интернет-магазин, интегрировали CMS и платежные системы. Результат — +40% продаж уже в первом квартале.',
+    testimonial1Name: 'Ирина Петренко',
+    testimonial1Position: 'CEO Fashion.ua',
+    testimonial2Text: 'Образовательная платформа, которую разработала команда Gravity, превзошла все наши ожидания. Интуитивный интерфейс, стабильная работа и отличная поддержка. Рекомендую!',
+    testimonial2Name: 'Александр Коваленко',
+    testimonial2Position: 'Основатель EdTech Hub',
+    testimonial3Text: 'С 2019 года команда Gravity Team — наш неизменный партнер по веб-разработке. Они доказали, что могут обеспечивать высокое качество и соблюдать сроки.',
+    testimonial3Name: 'Мария Сидоренко',
+    testimonial3Position: 'Маркетинг-директор StartupX',
     
     // Join Team
     joinTeamTitle: 'Присоединяйтесь к',
@@ -387,6 +554,46 @@ const translations = {
     careerGrowth: 'Возможность профессионального роста',
     sendResume: 'Отправить резюме',
     viewVacancies: 'Посмотреть вакансии',
+    
+    // Contact section
+    contactTitle: 'Свяжитесь с нами',
+    contactSubtitle: 'Будем рады обсудить ваш проект! Заполните форму или воспользуйтесь контактами ниже.',
+    sendMessage: 'Отправить сообщение',
+    nameLabel: 'Имя',
+    namePlaceholder: 'Ваше имя',
+    emailLabel: 'Email',
+    emailPlaceholder: 'your@email.com',
+    phoneLabel: 'Телефон',
+    phonePlaceholder: '+7 (xxx) xxx-xx-xx',
+    messageLabel: 'Сообщение',
+    messagePlaceholder: 'Расскажите о вашем проекте...',
+    sendButton: 'Отправить',
+    contactInfo: 'Контактная информация',
+    contactEmail: 'info@gravityteam.ua',
+    contactPhone: '+38 (044) 123-45-67',
+    contactAddress: 'г. Киев, ул. Крещатик, 1',
+    workingHours: '24/7 поддержка',
+    followUs: 'Следите за нами',
+    
+    // Footer
+    servicesFooter: 'Услуги',
+    companyFooter: 'Компания',
+    helpFooter: 'Помощь',
+    contactsFooter: 'Контакты',
+    aboutUs: 'О нас',
+    vacancies: 'Вакансии',
+    blog: 'Блог',
+    support: 'Поддержка',
+    privacyPolicy: 'Политика конфиденциальности',
+    termsOfUse: 'Условия использования',
+    address: 'Адрес:',
+    phone: 'Телефон:',
+    email: 'Email:',
+    newsletter: 'Подпишитесь на наши новости',
+    newsletterText: 'Получайте последние новости о трендах веб-разработки и специальные предложения',
+    emailPlaceholderFooter: 'Ваш email',
+    subscribe: 'Подписаться',
+    copyright: '© 2025 Gravity Team — Все права защищены.',
     
     // FAQ
     faqTitle: 'Часто задаваемые вопросы',
