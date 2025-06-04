@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export type Language = 'uk' | 'en' | 'ru';
@@ -22,6 +21,20 @@ const translations = {
     contacts: 'Контакти',
     getConsultation: 'Отримати консультацію',
     allServices: 'Усі послуги',
+
+    // FAQ Section
+    faqTitle: 'Часті запитання',
+    faqSubtitle: 'Відповіді на найпоширеніші питання про наші послуги',
+    faq1Question: 'Скільки часу займає розробка сайту?',
+    faq1Answer: 'Час розробки залежить від складності проєкту. Простий лендінг займає 1-2 тижні, корпоративний сайт - 3-4 тижні, а інтернет-магазин - від 4 до 8 тижнів.',
+    faq2Question: 'Чи надаєте ви підтримку після запуску сайту?',
+    faq2Answer: 'Так, ми надаємо технічну підтримку протягом 3 місяців безкоштовно після запуску. Також пропонуємо платні пакети подальшого обслуговування.',
+    faq3Question: 'Чи можна змінити дизайн в процесі розробки?',
+    faq3Answer: 'Невеликі правки можливі на етапі дизайну. Кардинальні зміни після затвердження макету можуть вплинути на терміни та вартість проєкту.',
+    faq4Question: 'Чи розробляєте ви мобільні додатки?',
+    faq4Answer: 'Наразі ми спеціалізуємося на веб-розробці. Всі наші сайти адаптивні та відмінно працюють на мобільних пристроях.',
+    faq5Question: 'Як відбувається оплата за послуги?',
+    faq5Answer: 'Оплата проводиться поетапно: 50% передоплата на початку проєкту, 50% після здачі готової роботи. Для великих проєктів можливо розбиття на більше етапів.',
 
     // Services Section
     servicesTitle: 'Наші послуги',
@@ -143,6 +156,20 @@ const translations = {
     getConsultation: 'Get Consultation',
     allServices: 'All Services',
 
+    // FAQ Section
+    faqTitle: 'Frequently Asked Questions',
+    faqSubtitle: 'Answers to the most common questions about our services',
+    faq1Question: 'How long does website development take?',
+    faq1Answer: 'Development time depends on project complexity. A simple landing page takes 1-2 weeks, corporate website - 3-4 weeks, and an online store - from 4 to 8 weeks.',
+    faq2Question: 'Do you provide support after website launch?',
+    faq2Answer: 'Yes, we provide technical support for 3 months free of charge after launch. We also offer paid ongoing maintenance packages.',
+    faq3Question: 'Can design be changed during development?',
+    faq3Answer: 'Minor adjustments are possible during the design phase. Major changes after design approval may affect timeline and project cost.',
+    faq4Question: 'Do you develop mobile apps?',
+    faq4Answer: 'Currently we specialize in web development. All our websites are responsive and work excellently on mobile devices.',
+    faq5Question: 'How is payment for services handled?',
+    faq5Answer: 'Payment is made in stages: 50% prepayment at project start, 50% after delivery of finished work. For large projects, we can split into more stages.',
+
     // Services Section
     servicesTitle: 'Our Services',
     servicesSubtitle: 'Full range of services for your business',
@@ -263,6 +290,20 @@ const translations = {
     getConsultation: 'Получить консультацию',
     allServices: 'Все услуги',
 
+    // FAQ Section
+    faqTitle: 'Часто задаваемые вопросы',
+    faqSubtitle: 'Ответы на самые распространенные вопросы о наших услугах',
+    faq1Question: 'Сколько времени занимает разработка сайта?',
+    faq1Answer: 'Время разработки зависит от сложности проекта. Простой лендинг занимает 1-2 недели, корпоративный сайт - 3-4 недели, а интернет-магазин - от 4 до 8 недель.',
+    faq2Question: 'Предоставляете ли вы поддержку после запуска сайта?',
+    faq2Answer: 'Да, мы предоставляем техническую поддержку в течение 3 месяцев бесплатно после запуска. Также предлагаем платные пакеты дальнейшего обслуживания.',
+    faq3Question: 'Можно ли изменить дизайн в процессе разработки?',
+    faq3Answer: 'Небольшие правки возможны на этапе дизайна. Кардинальные изменения после утверждения макета могут повлиять на сроки и стоимость проекта.',
+    faq4Question: 'Разрабатываете ли вы мобильные приложения?',
+    faq4Answer: 'В настоящее время мы специализируемся на веб-разработке. Все наши сайты адаптивные и отлично работают на мобильных устройствах.',
+    faq5Question: 'Как происходит оплата за услуги?',
+    faq5Answer: 'Оплата проводится поэтапно: 50% предоплата в начале проекта, 50% после сдачи готовой работы. Для больших проектов возможно разбиение на больше этапов.',
+
     // Services Section
     servicesTitle: 'Наши услуги',
     servicesSubtitle: 'Полный спектр услуг для вашего бизнеса',
@@ -274,9 +315,9 @@ const translations = {
 
     // Main Services
     onlineStoreTitle: 'Интернет-магазин',
-    onlineStoreDescription: 'Полнофункциональный интернет-магазин с системой оплаты, админ-панелью и интеграцией с CRM',
+    onlineStoreDescription: 'Полнофункциональный интернет-магазин с системою оплаты, админ-панелью и интеграцией с CRM',
     educationalPlatformTitle: 'Образовательная платформа',
-    educationalPlatformDescription: 'Платформа для онлайн-обучения с видео-уроками, тестами и системой сертификации',
+    educationalPlatformDescription: 'Платформа для онлайн-обучения с видео-уроками, тестами и системою сертификации',
     landingPageTitle: 'Landing Page',
     landingPageDescription: 'Продающая страница с высокой конверсией для ваших товаров или услуг',
     corporateWebsiteTitle: 'Корпоративный сайт',
@@ -284,7 +325,7 @@ const translations = {
     portfolioSiteTitle: 'Сайт-портфолио',
     portfolioSiteDescription: 'Персональный сайт для демонстрации ваших работ и достижений',
     mediaPortalTitle: 'Медиа-портал',
-    mediaPortalDescription: 'Новостной портал или блог с системой публикаций и комментариев',
+    mediaPortalDescription: 'Новостной портал или блог с системою публикаций и комментариев',
 
     // Additional Services
     logoDesignTitle: 'Дизайн логотипа',
