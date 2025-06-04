@@ -2,12 +2,15 @@
 import React, { useState, useEffect } from 'react';
 import { useAppDispatch } from '../hooks/useAppDispatch';
 import { useAppSelector } from '../hooks/useAppSelector';
+import { useLanguage } from '../contexts/LanguageContext';
 import { toggleMobileMenu, closeMobileMenu } from '../store/slices/uiSlice';
 import { Menu, ChevronDown } from 'lucide-react';
+import LanguageSelector from './LanguageSelector';
 
 const Header: React.FC = () => {
   const dispatch = useAppDispatch();
   const { isMobileMenuOpen } = useAppSelector(state => state.ui);
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
@@ -29,12 +32,12 @@ const Header: React.FC = () => {
   };
 
   const services = [
-    { name: 'Інтернет-магазин', id: 'services' },
-    { name: 'Освітня платформа', id: 'services' },
-    { name: 'Landing-page', id: 'services' },
-    { name: 'Корпоративний сайт', id: 'services' },
-    { name: 'Портфоліо', id: 'services' },
-    { name: 'Медіа-портал', id: 'services' },
+    { name: t('landingPage'), id: 'services' },
+    { name: t('educationalPlatform'), id: 'services' },
+    { name: t('corporateWebsite'), id: 'services' },
+    { name: t('onlineStore'), id: 'services' },
+    { name: t('portfolio'), id: 'services' },
+    { name: t('mediaPortal'), id: 'services' },
   ];
 
   return (
@@ -57,13 +60,13 @@ const Header: React.FC = () => {
               onClick={() => scrollToSection('hero')}
               className="text-white hover:text-blue-400 transition-colors"
             >
-              Головна
+              {t('home')}
             </button>
             <button 
               onClick={() => scrollToSection('about')}
               className="text-white hover:text-blue-400 transition-colors"
             >
-              Про нас
+              {t('about')}
             </button>
             
             {/* Services Dropdown */}
@@ -73,7 +76,7 @@ const Header: React.FC = () => {
               onMouseLeave={() => setIsServicesOpen(false)}
             >
               <button className="flex items-center text-white hover:text-blue-400 transition-colors">
-                Наші послуги
+                {t('services')}
                 <ChevronDown className="ml-1 w-4 h-4" />
               </button>
               
@@ -96,29 +99,44 @@ const Header: React.FC = () => {
               onClick={() => scrollToSection('portfolio')}
               className="text-white hover:text-blue-400 transition-colors"
             >
-              Портфоліо
+              {t('portfolio')}
+            </button>
+            <button 
+              onClick={() => scrollToSection('calculator')}
+              className="text-white hover:text-blue-400 transition-colors"
+            >
+              {t('calculator')}
+            </button>
+            <button 
+              onClick={() => scrollToSection('faq')}
+              className="text-white hover:text-blue-400 transition-colors"
+            >
+              {t('faq')}
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
               className="text-white hover:text-blue-400 transition-colors"
             >
-              Відгуки
+              {t('testimonials')}
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
               className="text-white hover:text-blue-400 transition-colors"
             >
-              Контакти
+              {t('contacts')}
             </button>
           </nav>
 
-          {/* CTA Button */}
-          <button 
-            onClick={() => scrollToSection('contact')}
-            className="hidden lg:block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-          >
-            Отримати консультацію
-          </button>
+          {/* Language Selector & CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <LanguageSelector />
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            >
+              {t('getConsultation')}
+            </button>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -133,47 +151,62 @@ const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md">
             <nav className="flex flex-col space-y-4 p-4">
+              <div className="flex justify-center mb-4">
+                <LanguageSelector />
+              </div>
               <button 
                 onClick={() => scrollToSection('hero')}
                 className="text-white hover:text-blue-400 transition-colors text-left"
               >
-                Головна
+                {t('home')}
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="text-white hover:text-blue-400 transition-colors text-left"
               >
-                Про нас
+                {t('about')}
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
                 className="text-white hover:text-blue-400 transition-colors text-left"
               >
-                Наші послуги
+                {t('services')}
               </button>
               <button 
                 onClick={() => scrollToSection('portfolio')}
                 className="text-white hover:text-blue-400 transition-colors text-left"
               >
-                Портфоліо
+                {t('portfolio')}
+              </button>
+              <button 
+                onClick={() => scrollToSection('calculator')}
+                className="text-white hover:text-blue-400 transition-colors text-left"
+              >
+                {t('calculator')}
+              </button>
+              <button 
+                onClick={() => scrollToSection('faq')}
+                className="text-white hover:text-blue-400 transition-colors text-left"
+              >
+                {t('faq')}
               </button>
               <button 
                 onClick={() => scrollToSection('testimonials')}
                 className="text-white hover:text-blue-400 transition-colors text-left"
               >
-                Відгуки
+                {t('testimonials')}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="text-white hover:text-blue-400 transition-colors text-left"
               >
-                Контакти
+                {t('contacts')}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 mt-4"
               >
-                Отримати консультацію
+                {t('getConsultation')}
               </button>
             </nav>
           </div>
