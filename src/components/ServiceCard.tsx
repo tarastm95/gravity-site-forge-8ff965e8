@@ -24,13 +24,38 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, isLarge = true }) =>
     }
   };
 
+  // Get translated title and description based on service ID
+  const getServiceTitle = (serviceId: string) => {
+    const titleMap = {
+      '1': t('onlineStoreTitle'),
+      '2': t('educationalPlatformTitle'),
+      '3': t('landingPageTitle'),
+      '4': t('corporateWebsiteTitle'),
+      '5': t('portfolioSiteTitle'),
+      '6': t('mediaPortalTitle')
+    };
+    return titleMap[serviceId] || service.title;
+  };
+
+  const getServiceDescription = (serviceId: string) => {
+    const descriptionMap = {
+      '1': t('onlineStoreDescription'),
+      '2': t('educationalPlatformDescription'),
+      '3': t('landingPageDescription'),
+      '4': t('corporateWebsiteDescription'),
+      '5': t('portfolioSiteDescription'),
+      '6': t('mediaPortalDescription')
+    };
+    return descriptionMap[serviceId] || service.description;
+  };
+
   return (
     <div className={`bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105 group ${isLarge ? 'h-full' : ''}`}>
       <h3 className={`font-bold text-white mb-4 group-hover:text-blue-400 transition-colors ${isLarge ? 'text-2xl' : 'text-xl'}`}>
-        {service.title}
+        {getServiceTitle(service.id)}
       </h3>
       <p className={`text-gray-300 mb-6 leading-relaxed ${isLarge ? 'text-base' : 'text-sm'}`}>
-        {service.description}
+        {getServiceDescription(service.id)}
       </p>
       
       <div className="mb-6">
@@ -52,7 +77,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, isLarge = true }) =>
           onClick={handleViewDetails}
           className="w-full bg-gradient-to-r from-gray-600 to-gray-700 text-white py-3 rounded-lg hover:from-gray-500 hover:to-gray-600 transition-all duration-300 transform hover:scale-105 font-medium"
         >
-          Детальніше
+          {t('detailsButton')}
         </button>
         <button 
           onClick={() => scrollToSection('contact')}

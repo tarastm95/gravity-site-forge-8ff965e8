@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'uk' | 'en' | 'ru';
@@ -55,6 +56,26 @@ const translations = {
     customConsultation: 'Індивідуальна консультація',
     notFoundService: 'Не знайшли потрібну послугу?',
     notFoundServiceText: 'Зв\'яжіться з нами для індивідуальної консультації та розробки рішення під ваші потреби',
+    detailsButton: 'Детальніше',
+    
+    // Main Services
+    onlineStoreTitle: 'Інтернет-магазин під ключ',
+    onlineStoreDescription: 'Готове рішення з каталогом товарів, фільтрами, кошиком, інтеграцією платежів і служби доставки. Повний цикл: від проектування UI/UX до запуску на продакшені.',
+    
+    educationalPlatformTitle: 'Освітня платформа / Онлайн-курс',
+    educationalPlatformDescription: 'Платформа для проведення онлайн-курсів з особистими кабінетами, відеоуроками, тестами та сертифікацією. Вбудована система монетизації та керування контентом.',
+    
+    landingPageTitle: 'Landing-page',
+    landingPageDescription: 'Односторінковий сайт для презентації продукту чи послуги: яскравий дизайн, адаптивність під мобільні, інтеграція з формою збору лідів.',
+    
+    corporateWebsiteTitle: 'Корпоративний сайт / Каталог',
+    corporateWebsiteDescription: 'Сайт для представлення компанії: розділи «Про нас», «Послуги», «Портфоліо», «Прайс» та «Контакти». Легке редагування через CMS.',
+    
+    portfolioSiteTitle: 'Портфоліо / Сайт-візитка',
+    portfolioSiteDescription: 'Невеликий сайт зі стилем бренду: блок «Про мене», галерея робіт, контактна форма. Ідеально для фрилансерів та малих агенцій.',
+    
+    mediaPortalTitle: 'Медіа-портал / Сервісний сайт',
+    mediaPortalDescription: 'Платформа з редакційною системою: публікація статей, новин, відео, флоти із рекламними блоками. Інтеграція з CRM та API.',
     
     // Calculator
     projectType: 'Тип проекту',
@@ -166,6 +187,26 @@ const translations = {
     customConsultation: 'Individual Consultation',
     notFoundService: 'Can\'t find the service you need?',
     notFoundServiceText: 'Contact us for individual consultation and development of a solution for your needs',
+    detailsButton: 'Details',
+    
+    // Main Services
+    onlineStoreTitle: 'Turnkey Online Store',
+    onlineStoreDescription: 'Ready-made solution with product catalog, filters, shopping cart, payment integration and delivery service. Full cycle: from UI/UX design to production launch.',
+    
+    educationalPlatformTitle: 'Educational Platform / Online Course',
+    educationalPlatformDescription: 'Platform for conducting online courses with personal accounts, video lessons, tests and certification. Built-in monetization system and content management.',
+    
+    landingPageTitle: 'Landing Page',
+    landingPageDescription: 'Single-page website for product or service presentation: bright design, mobile responsiveness, integration with lead capture form.',
+    
+    corporateWebsiteTitle: 'Corporate Website / Catalog',
+    corporateWebsiteDescription: 'Website for company presentation: "About Us", "Services", "Portfolio", "Pricing" and "Contacts" sections. Easy editing through CMS.',
+    
+    portfolioSiteTitle: 'Portfolio / Business Card Site',
+    portfolioSiteDescription: 'Small website with brand style: "About Me" block, work gallery, contact form. Perfect for freelancers and small agencies.',
+    
+    mediaPortalTitle: 'Media Portal / Service Website',
+    mediaPortalDescription: 'Platform with editorial system: publishing articles, news, videos, feeds with advertising blocks. CRM and API integration.',
     
     // Calculator
     projectType: 'Project Type',
@@ -277,6 +318,26 @@ const translations = {
     customConsultation: 'Индивидуальная консультация',
     notFoundService: 'Не нашли нужную услугу?',
     notFoundServiceText: 'Свяжитесь с нами для индивидуальной консультации и разработки решения под ваши потребности',
+    detailsButton: 'Подробнее',
+    
+    // Main Services
+    onlineStoreTitle: 'Интернет-магазин под ключ',
+    onlineStoreDescription: 'Готовое решение с каталогом товаров, фильтрами, корзиной, интеграцией платежей и службы доставки. Полный цикл: от проектирования UI/UX до запуска на продакшене.',
+    
+    educationalPlatformTitle: 'Образовательная платформа / Онлайн-курс',
+    educationalPlatformDescription: 'Платформа для проведения онлайн-курсов с личными кабинетами, видеоуроками, тестами и сертификацией. Встроенная система монетизации и управления контентом.',
+    
+    landingPageTitle: 'Landing-страница',
+    landingPageDescription: 'Одностраничный сайт для презентации продукта или услуги: яркий дизайн, адаптивность под мобильные, интеграция с формой сбора лидов.',
+    
+    corporateWebsiteTitle: 'Корпоративный сайт / Каталог',
+    corporateWebsiteDescription: 'Сайт для представления компании: разделы «О нас», «Услуги», «Портфолио», «Прайс» и «Контакты». Легкое редактирование через CMS.',
+    
+    portfolioSiteTitle: 'Портфолио / Сайт-визитка',
+    portfolioSiteDescription: 'Небольшой сайт со стилем бренда: блок «Обо мне», галерея работ, контактная форма. Идеально для фрилансеров и малых агентств.',
+    
+    mediaPortalTitle: 'Медиа-портал / Сервисный сайт',
+    mediaPortalDescription: 'Платформа с редакционной системой: публикация статей, новостей, видео, флоты с рекламными блоками. Интеграция с CRM и API.',
     
     // Calculator
     projectType: 'Тип проекта',
@@ -337,7 +398,7 @@ const translations = {
     faq3Question: 'Могу ли я самостоятельно редактировать контент на сайте?',
     faq3Answer: 'Да, все наши сайты имеют удобную систему управления контентом, которая позволяет легко редактировать тексты и изображения.',
     faq4Question: 'Адаптивны ли ваши сайты под мобильные устройства?',
-    faq4Answer: 'Абсолютно! Все наши сайты полностью адаптивны и отлично выглядят на всех устройствах.',
+    faq4Answer: 'Абсолютно! Все наши сайты полностью адаптивны и отлично выглядают на всех устройствах.',
     faq5Question: 'Какие способы оплаты вы принимаете?',
     faq5Answer: 'Мы принимаем оплату банковским переводом, картой Visa/MasterCard и через PayPal.',
     allServices: 'Все услуги',
