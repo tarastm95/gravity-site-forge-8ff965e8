@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import GlassCard from './GlassCard';
 
 const HeroSlider: React.FC = () => {
   const { t } = useLanguage();
@@ -12,19 +13,19 @@ const HeroSlider: React.FC = () => {
       title: t('heroSlide1Title'),
       subtitle: t('heroSlide1Subtitle'),
       highlight: t('heroSlide1Highlight'),
-      bgGradient: "from-blue-600 to-purple-700"
+      bgGradient: "from-blue-600 via-purple-600 to-pink-600"
     },
     {
       title: t('heroSlide2Title'),
       subtitle: t('heroSlide2Subtitle'),
       highlight: t('heroSlide2Highlight'),
-      bgGradient: "from-purple-600 to-pink-700"
+      bgGradient: "from-purple-600 via-pink-600 to-rose-600"
     },
     {
       title: t('heroSlide3Title'),
       subtitle: t('heroSlide3Subtitle'),
       highlight: t('heroSlide3Highlight'),
-      bgGradient: "from-indigo-600 to-blue-700"
+      bgGradient: "from-indigo-600 via-blue-600 to-cyan-600"
     }
   ];
 
@@ -53,86 +54,106 @@ const HeroSlider: React.FC = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background for current slide */}
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden font-poppins">
+      {/* Enhanced Background with mesh gradient */}
       <div className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].bgGradient} transition-all duration-1000`}>
-        {/* Animated Background Elements */}
+        {/* Animated Background Elements with more variety */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute top-1/6 right-1/6 w-48 h-48 bg-white/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
         </div>
+        
+        {/* Mesh gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer bg-[length:200%_100%]"></div>
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="max-w-5xl mx-auto">
-          {/* Promotion Badge */}
-          <div className="mb-6 animate-bounce">
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full text-lg font-bold shadow-2xl">
-              {slides[currentSlide].highlight}
-            </span>
+        <div className="max-w-6xl mx-auto">
+          {/* Enhanced Promotion Badge with glassmorphism */}
+          <div className="mb-8 animate-fade-in-down">
+            <GlassCard className="inline-block px-8 py-3 animate-glow">
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent text-lg font-bold">
+                ✨ {slides[currentSlide].highlight}
+              </span>
+            </GlassCard>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            {slides[currentSlide].title}
+          {/* Animated Title with typing effect */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight animate-fade-in-up">
+            <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+              {slides[currentSlide].title}
+            </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl lg:text-3xl text-gray-100 mb-10 leading-relaxed max-w-4xl mx-auto animate-fade-in-up font-light" style={{ animationDelay: '0.2s' }}>
             {slides[currentSlide].subtitle}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* Enhanced CTA buttons with glassmorphism */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="bg-white text-gray-900 text-lg px-8 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl font-semibold"
+              className="group relative overflow-hidden bg-white text-gray-900 text-lg px-10 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl font-semibold"
             >
-              {t('orderNow')}
+              <span className="relative z-10">{t('orderNow')}</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-neon-blue to-neon-purple opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </button>
-            <button 
-              onClick={() => scrollToSection('portfolio')}
-              className="border-2 border-white text-white text-lg px-8 py-4 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
-            >
-              {t('viewWork')}
-            </button>
+            
+            <GlassCard hover className="inline-block">
+              <button 
+                onClick={() => scrollToSection('portfolio')}
+                className="text-white text-lg px-10 py-4 rounded-full hover:text-neon-blue transition-all duration-300 transform hover:scale-105 font-semibold"
+              >
+                {t('viewWork')} →
+              </button>
+            </GlassCard>
           </div>
         </div>
       </div>
 
-      {/* Navigation arrows */}
-      <button 
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
+      {/* Enhanced Navigation arrows with glassmorphism */}
+      <GlassCard className="absolute left-6 top-1/2 transform -translate-y-1/2 p-2">
+        <button 
+          onClick={prevSlide}
+          className="text-white p-3 rounded-full transition-all duration-300 hover:text-neon-blue"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+      </GlassCard>
       
-      <button 
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
+      <GlassCard className="absolute right-6 top-1/2 transform -translate-y-1/2 p-2">
+        <button 
+          onClick={nextSlide}
+          className="text-white p-3 rounded-full transition-all duration-300 hover:text-neon-blue"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+      </GlassCard>
 
-      {/* Dots indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+      {/* Enhanced Dots indicator */}
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex space-x-4">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`h-3 rounded-full transition-all duration-300 ${
               index === currentSlide 
-                ? 'bg-white w-8' 
-                : 'bg-white/50 hover:bg-white/70'
+                ? 'bg-white w-12 shadow-lg shadow-white/30' 
+                : 'bg-white/50 hover:bg-white/70 w-3'
             }`}
           />
         ))}
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
-        </div>
+      {/* Enhanced Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
+        <GlassCard className="p-2">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </GlassCard>
       </div>
     </section>
   );

@@ -12,11 +12,15 @@ import FAQ from '../components/FAQ';
 import JoinTeam from '../components/JoinTeam';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import ScrollProgress from '../components/ScrollProgress';
+import FloatingElements from '../components/FloatingElements';
 
 const Index: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-gray-900 relative">
       <SEO />
+      <ScrollProgress />
+      <FloatingElements />
       <Header />
       <main>
         <HeroSlider />

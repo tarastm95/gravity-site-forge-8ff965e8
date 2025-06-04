@@ -1,8 +1,9 @@
-
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { ZoomIn, ZoomOut, X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import GlassCard from './GlassCard';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface PortfolioItem {
   id: number;
@@ -17,6 +18,7 @@ interface PortfolioItem {
 
 const Portfolio: React.FC = () => {
   const { t } = useLanguage();
+  const { ref, isVisible } = useScrollAnimation();
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
   const [zoomLevel, setZoomLevel] = useState(1);
 
@@ -179,91 +181,103 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <section id="portfolio" className="py-20 bg-gray-900 relative overflow-hidden">
-      {/* Background decoration */}
+    <section id="portfolio" className="py-20 bg-gray-900 relative overflow-hidden font-inter" ref={ref}>
+      {/* Enhanced background decoration with parallax effect */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-r from-neon-blue/10 to-neon-purple/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-gradient-to-r from-neon-purple/10 to-neon-pink/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-neon-green/5 to-neon-blue/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        {/* Enhanced Header with animation */}
+        <div className={`text-center mb-16 transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-white via-neon-blue to-white bg-clip-text text-transparent">
             {t('portfolioTitle')}
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light">
             {t('portfolioSubtitle')}
           </p>
         </div>
 
-        {/* Portfolio Grid */}
+        {/* Enhanced Portfolio Grid with staggered animations */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {portfolioItems.map((item) => (
+          {portfolioItems.map((item, index) => (
             <div 
               key={item.id}
-              className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105"
+              className={`transition-all duration-1000 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="relative overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.title}
-                  className="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute top-4 right-4">
-                  <span className="bg-blue-500/90 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {item.category}
-                  </span>
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  {item.description}
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <button 
-                    onClick={() => openModal(item)}
-                    className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
-                  >
-                    {t('detailsButton')} →
-                  </button>
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">→</span>
+              <GlassCard className="group overflow-hidden hover:shadow-2xl hover:shadow-neon-blue/20 transform hover:scale-105 transition-all duration-500">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4">
+                    <GlassCard className="px-3 py-1">
+                      <span className="text-neon-blue text-sm font-medium">
+                        {item.category}
+                      </span>
+                    </GlassCard>
                   </div>
                 </div>
-              </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-neon-blue transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed font-light">
+                    {item.description}
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <button 
+                      onClick={() => openModal(item)}
+                      className="text-neon-blue hover:text-neon-purple transition-colors font-medium group-hover:animate-shimmer"
+                    >
+                      {t('detailsButton')} →
+                    </button>
+                    <div className="w-8 h-8 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full flex items-center justify-center group-hover:animate-glow">
+                      <span className="text-white text-sm">→</span>
+                    </div>
+                  </div>
+                </div>
+              </GlassCard>
             </div>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 p-8 rounded-2xl border border-blue-500/30">
-            <h3 className="text-2xl font-bold text-white mb-4">
+        {/* Enhanced Call to Action with glassmorphism */}
+        <div className={`text-center transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`} style={{ transitionDelay: '1000ms' }}>
+          <GlassCard gradient className="p-8 border-neon-blue/30 hover:border-neon-purple/50">
+            <h3 className="text-3xl font-bold text-white mb-4 bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent">
               {t('portfolioCTA')}
             </h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-6 font-light">
               {t('portfolioCTAText')}
             </p>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-neon-blue to-neon-purple text-white px-8 py-3 rounded-full hover:from-neon-purple hover:to-neon-pink transition-all duration-300 transform hover:scale-105 animate-glow font-semibold"
             >
               {t('startProject')}
             </button>
-          </div>
+          </GlassCard>
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Enhanced Modal with glassmorphism */}
       <Dialog open={!!selectedItem} onOpenChange={() => closeModal()}>
-        <DialogContent className="max-w-6xl max-h-[90vh] bg-gray-900 border-gray-700">
+        <DialogContent className="max-w-6xl max-h-[90vh] bg-gray-900/90 backdrop-blur-md border-gray-700">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-white mb-4">
               {selectedItem?.title}
