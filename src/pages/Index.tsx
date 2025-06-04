@@ -2,7 +2,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import Header from '../components/Header';
-import Hero from '../components/Hero';
+import HeroSlider from '../components/HeroSlider';
 import About from '../components/About';
 import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
@@ -20,7 +20,7 @@ const Index: React.FC = () => {
       <SEO />
       <Header />
       <main>
-        <Hero />
+        <HeroSlider />
         <About />
         <Services />
         <Portfolio />
