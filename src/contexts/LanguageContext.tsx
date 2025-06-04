@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export type Language = 'uk' | 'en' | 'ru';
 
@@ -56,15 +57,20 @@ const translations = {
     details: 'Деталі',
 
     // Testimonials
-    testimonial1: 'Gravity Team воістину професіонали: упродовж місяця створили для нас повноцінний інтернет-магазин, інтегрували CMS і платіжні системи. Результат — +40% продажів уже за перший квартал.',
+    testimonialsTitle: 'Відгуки клієнтів',
+    testimonialsSubtitle: 'Що говорять наші клієнти про роботу з нами',
+    testimonial1Text: 'Gravity Team воістину професіонали: упродовж місяця створили для нас повноцінний інтернет-магазин, інтегрували CMS і платіжні системи. Результат — +40% продажів уже за перший квартал.',
     testimonial1Name: 'Ірина Петренко',
     testimonial1Position: 'CEO Fashion.ua',
-    testimonial2: 'Завдяки команді Gravity Team наш стартап отримав сучасний лендінг з адаптивним дизайном. Конверсія виросла на 65%, а час завантаження скоротився втричі.',
+    testimonial2Text: 'Завдяки команді Gravity Team наш стартап отримав сучасний лендінг з адаптивним дизайном. Конверсія виросла на 65%, а час завантаження скоротився втричі.',
     testimonial2Name: 'Максим Коваленко',
     testimonial2Position: 'Засновник TechStart',
-    testimonial3: 'Найкраща команда для розробки корпоративних сайтів! Gravity Team створили для нас багатомовний портал з CMS, що дозволив збільшити клієнтську базу на 80%.',
+    testimonial3Text: 'Найкраща команда для розробки корпоративних сайтів! Gravity Team створили для нас багатомовний портал з CMS, що дозволив збільшити клієнтську базу на 80%.',
     testimonial3Name: 'Олена Сидорова',
     testimonial3Position: 'Маркетинг-директор GlobalCorp',
+    testimonial4Text: 'Замовляли у Gravity Team редизайн нашого ресторанного сайту. Отримали сучасний дизайн з онлайн-бронюванням столиків. Кількість бронювань зросла на 120%!',
+    testimonial4Name: 'Андрій Мельник',
+    testimonial4Position: 'Власник ресторану "Смачно"',
 
     // Footer
     footerServices: 'Послуги',
@@ -72,7 +78,7 @@ const translations = {
     educationalPlatform: 'Освітня платформа',
     landingPage: 'Landing-page',
     corporateWebsite: 'Корпоративний сайт',
-    portfolio: 'Портфоліо',
+    portfolioSite: 'Портфоліо',
     mediaPortal: 'Медіа-портал',
     company: 'Компанія',
     aboutUs: 'Про нас',
@@ -138,15 +144,20 @@ const translations = {
     details: 'Details',
 
     // Testimonials
-    testimonial1: 'Gravity Team are true professionals: they created a full-fledged online store for us in a month, integrated CMS and payment systems. The result is +40% sales in the first quarter.',
+    testimonialsTitle: 'Client Testimonials',
+    testimonialsSubtitle: 'What our clients say about working with us',
+    testimonial1Text: 'Gravity Team are true professionals: they created a full-fledged online store for us in a month, integrated CMS and payment systems. The result is +40% sales in the first quarter.',
     testimonial1Name: 'Iryna Petrenko',
     testimonial1Position: 'CEO Fashion.ua',
-    testimonial2: 'Thanks to the Gravity Team, our startup got a modern landing page with responsive design. Conversion increased by 65%, and loading time was reduced threefold.',
+    testimonial2Text: 'Thanks to the Gravity Team, our startup got a modern landing page with responsive design. Conversion increased by 65%, and loading time was reduced threefold.',
     testimonial2Name: 'Maksym Kovalenko',
     testimonial2Position: 'TechStart Founder',
-    testimonial3: 'The best team for corporate website development! Gravity Team created a multilingual portal with CMS for us, which allowed us to increase our client base by 80%.',
+    testimonial3Text: 'The best team for corporate website development! Gravity Team created a multilingual portal with CMS for us, which allowed us to increase our client base by 80%.',
     testimonial3Name: 'Olena Sydorova',
     testimonial3Position: 'Marketing Director GlobalCorp',
+    testimonial4Text: 'We ordered a redesign of our restaurant website from Gravity Team. Got a modern design with online table booking. The number of bookings increased by 120%!',
+    testimonial4Name: 'Andriy Melnyk',
+    testimonial4Position: 'Owner of "Delicious" Restaurant',
 
     // Footer
     footerServices: 'Services',
@@ -154,7 +165,7 @@ const translations = {
     educationalPlatform: 'Educational Platform',
     landingPage: 'Landing Page',
     corporateWebsite: 'Corporate Website',
-    portfolio: 'Portfolio',
+    portfolioSite: 'Portfolio',
     mediaPortal: 'Media Portal',
     company: 'Company',
     aboutUs: 'About Us',
@@ -220,15 +231,20 @@ const translations = {
     details: 'Детали',
 
     // Testimonials
-    testimonial1: 'Gravity Team поистине профессионалы: в течение месяца создали для нас полноценный интернет-магазин, интегрировали CMS и платежные системы. Результат — +40% продаж уже в первом квартале.',
+    testimonialsTitle: 'Отзывы клиентов',
+    testimonialsSubtitle: 'Что говорят наши клиенты о работе с нами',
+    testimonial1Text: 'Gravity Team поистине профессионалы: в течение месяца создали для нас полноценный интернет-магазин, интегрировали CMS и платежные системы. Результат — +40% продаж уже в первом квартале.',
     testimonial1Name: 'Ирина Петренко',
     testimonial1Position: 'CEO Fashion.ua',
-    testimonial2: 'Благодаря команде Gravity Team наш стартап получил современный лендинг с адаптивным дизайном. Конверсия выросла на 65%, а время загрузки сократилось втрое.',
+    testimonial2Text: 'Благодаря команде Gravity Team наш стартап получил современный лендинг с адаптивным дизайном. Конверсия выросла на 65%, а время загрузки сократилось втрое.',
     testimonial2Name: 'Максим Коваленко',
     testimonial2Position: 'Основатель TechStart',
-    testimonial3: 'Лучшая команда для разработки корпоративных сайтов! Gravity Team создали для нас многоязычный портал с CMS, что позволило увеличить клиентскую базу на 80%.',
+    testimonial3Text: 'Лучшая команда для разработки корпоративных сайтов! Gravity Team создали для нас многоязычный портал с CMS, что позволило увеличить клиентскую базу на 80%.',
     testimonial3Name: 'Елена Сидорова',
     testimonial3Position: 'Директор по маркетингу GlobalCorp',
+    testimonial4Text: 'Заказывали у Gravity Team редизайн нашего ресторанного сайта. Получили современный дизайн с онлайн-бронированием столиков. Количество бронирований выросло на 120%!',
+    testimonial4Name: 'Андрей Мельник',
+    testimonial4Position: 'Владелец ресторана "Вкусно"',
 
     // Footer
     footerServices: 'Услуги',
@@ -236,7 +252,7 @@ const translations = {
     educationalPlatform: 'Образовательная платформа',
     landingPage: 'Landing-page',
     corporateWebsite: 'Корпоративный сайт',
-    portfolio: 'Портфолио',
+    portfolioSite: 'Портфолио',
     mediaPortal: 'Медиа-портал',
     company: 'Компания',
     aboutUs: 'О нас',
