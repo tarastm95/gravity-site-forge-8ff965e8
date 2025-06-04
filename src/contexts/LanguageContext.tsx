@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'uk' | 'en' | 'ru';
@@ -96,6 +95,72 @@ const translations = {
     portfolioCTA: 'Готові створити щось подібне?',
     portfolioCTAText: 'Давайте обговоримо ваш проект та створимо щось унікальне разом',
     startProject: 'Почати проект',
+    
+    // Portfolio items
+    portfolioItem1Title: 'Агенція веб-розробки',
+    portfolioItem1Description: 'Сучасний дизайн для креативної агенції з портфоліо робіт',
+    portfolioItem1DetailedDescription: 'Повнофункціональний сайт для креативної агенції, що демонструє портфоліо робіт та послуги. Дизайн виконаний у сучасному стилі з акцентом на візуальний контент та зручну навігацію.',
+    portfolioItem1Category: 'Веб-дизайн',
+    
+    portfolioItem2Title: 'Welcome Studio',
+    portfolioItem2Description: 'Мінімалістичний дизайн студії з акцентом на досвід користувача',
+    portfolioItem2DetailedDescription: 'Елегантний сайт для дизайн-студії з мінімалістичним підходом. Фокус на UX/UI дизайні та презентації творчих рішень. Використано сучасні принципи веб-дизайну.',
+    portfolioItem2Category: 'UX/UI Дизайн',
+    
+    portfolioItem3Title: 'Бізнес-рішення Optium',
+    portfolioItem3Description: 'Корпоративний сайт для технологічних бізнес-рішень',
+    portfolioItem3DetailedDescription: 'Професійний корпоративний сайт для технологічної компанії. Представляє бізнес-рішення та послуги компанії з акцентом на надійність та інновації.',
+    portfolioItem3Category: 'Корпоративний',
+    
+    portfolioItem4Title: 'Digital makers',
+    portfolioItem4Description: 'Платформа для цифрових виробників з сучасним інтерфейсом',
+    portfolioItem4DetailedDescription: 'Інноваційна платформа для цифрових креаторів та виробників. Забезпечує інструменти для створення, управління та продажу цифрових продуктів.',
+    portfolioItem4Category: 'Платформа',
+    
+    portfolioItem5Title: 'Дизайн-студія',
+    portfolioItem5Description: 'Елегантний сайт для дизайнерського агентства',
+    portfolioItem5DetailedDescription: 'Стильний та функціональний сайт для дизайн-агентства. Демонструє креативний підхід команди та високу якість виконаних проектів.',
+    portfolioItem5Category: 'Креативний',
+    
+    portfolioItem6Title: 'Мобільний додаток',
+    portfolioItem6Description: 'UI дизайн для мобільного додатку доставки',
+    portfolioItem6DetailedDescription: 'Сучасний дизайн мобільного додатку для служби доставки. Інтуїтивний інтерфейс з акцентом на зручність використання та швидкість замовлення.',
+    portfolioItem6Category: 'Мобільний',
+    
+    portfolioItem7Title: 'Miro колаборація',
+    portfolioItem7Description: 'Інтерфейс для платформи командної роботи',
+    portfolioItem7DetailedDescription: 'Дизайн інтерфейсу для платформи командної співпраці. Забезпечує ефективну взаємодію між членами команди та управління проектами.',
+    portfolioItem7Category: 'SaaS',
+    
+    portfolioItem8Title: 'Digital Studio',
+    portfolioItem8Description: 'Темний дизайн для цифрової студії з портфоліо',
+    portfolioItem8DetailedDescription: 'Елегантний темний дизайн для цифрової студії. Акцент на візуальному контенті та сучасних трендах веб-дизайну з унікальними анімаціями.',
+    portfolioItem8Category: 'Портфоліо',
+    
+    portfolioItem9Title: 'PostPilot маркетинг',
+    portfolioItem9Description: 'Яскравий дизайн для маркетингової платформи',
+    portfolioItem9DetailedDescription: 'Динамічний та яскравий дизайн для маркетингової платформи. Оптимізований для конверсії та залучення клієнтів з акцентом на результативність.',
+    portfolioItem9Category: 'Маркетинг',
+    
+    portfolioItem10Title: 'Gravity Team',
+    portfolioItem10Description: 'Наш власний сайт з темним дизайном та градієнтами',
+    portfolioItem10DetailedDescription: 'Власний корпоративний сайт студії Gravity Team. Демонструє наші можливості в області сучасного веб-дизайну та розробки.',
+    portfolioItem10Category: 'Власний проект',
+    
+    portfolioItem11Title: 'Certo Mobile Privacy',
+    portfolioItem11Description: 'Додаток для захисту мобільної приватності',
+    portfolioItem11DetailedDescription: 'Професійний лендінг для додатку захисту мобільної приватності. Яскравий дизайн з акцентом на безпеку та довіру користувачів. Включає відгуки, статистику та детальний опис функцій.',
+    portfolioItem11Category: 'Мобільний додаток',
+    
+    portfolioItem12Title: 'Sable Financial',
+    portfolioItem12Description: 'Фінансова платформа з темним дизайном',
+    portfolioItem12DetailedDescription: 'Сучасна фінансова платформа з елегантним темним дизайном. Фокус на зручності використання фінансових послуг та інтуїтивному інтерфейсі. Включає порівняльні таблиці та відгуки.',
+    portfolioItem12Category: 'Фінтех',
+    
+    portfolioItem13Title: 'Web3 Design Studio',
+    portfolioItem13Description: 'Дизайн-студія для Web3 проектів',
+    portfolioItem13DetailedDescription: 'Інноваційна дизайн-студія, що спеціалізується на Web3 проектах. Темний футуристичний дизайн з акцентом на блокчейн технології та NFT проекти. Демонструє портфоліо та процес роботи.',
+    portfolioItem13Category: 'Web3',
     
     // Calculator
     projectType: 'Тип проекту',
@@ -297,6 +362,72 @@ const translations = {
     portfolioCTAText: 'Let\'s discuss your project and create something unique together',
     startProject: 'Start Project',
     
+    // Portfolio items
+    portfolioItem1Title: 'Web Development Agency',
+    portfolioItem1Description: 'Modern design for creative agency with portfolio works',
+    portfolioItem1DetailedDescription: 'Full-featured website for creative agency showcasing portfolio works and services. Design executed in modern style with focus on visual content and convenient navigation.',
+    portfolioItem1Category: 'Web Design',
+    
+    portfolioItem2Title: 'Welcome Studio',
+    portfolioItem2Description: 'Minimalist studio design with focus on user experience',
+    portfolioItem2DetailedDescription: 'Elegant website for design studio with minimalist approach. Focus on UX/UI design and presentation of creative solutions. Used modern web design principles.',
+    portfolioItem2Category: 'UX/UI Design',
+    
+    portfolioItem3Title: 'Optium Business Solutions',
+    portfolioItem3Description: 'Corporate website for technological business solutions',
+    portfolioItem3DetailedDescription: 'Professional corporate website for technology company. Presents business solutions and company services with focus on reliability and innovation.',
+    portfolioItem3Category: 'Corporate',
+    
+    portfolioItem4Title: 'Digital makers',
+    portfolioItem4Description: 'Platform for digital makers with modern interface',
+    portfolioItem4DetailedDescription: 'Innovative platform for digital creators and makers. Provides tools for creating, managing and selling digital products.',
+    portfolioItem4Category: 'Platform',
+    
+    portfolioItem5Title: 'Design Studio',
+    portfolioItem5Description: 'Elegant website for design agency',
+    portfolioItem5DetailedDescription: 'Stylish and functional website for design agency. Demonstrates team\'s creative approach and high quality of completed projects.',
+    portfolioItem5Category: 'Creative',
+    
+    portfolioItem6Title: 'Mobile App',
+    portfolioItem6Description: 'UI design for mobile delivery app',
+    portfolioItem6DetailedDescription: 'Modern design of mobile app for delivery service. Intuitive interface with focus on ease of use and order speed.',
+    portfolioItem6Category: 'Mobile',
+    
+    portfolioItem7Title: 'Miro Collaboration',
+    portfolioItem7Description: 'Interface for team collaboration platform',
+    portfolioItem7DetailedDescription: 'Interface design for team collaboration platform. Provides effective interaction between team members and project management.',
+    portfolioItem7Category: 'SaaS',
+    
+    portfolioItem8Title: 'Digital Studio',
+    portfolioItem8Description: 'Dark design for digital studio with portfolio',
+    portfolioItem8DetailedDescription: 'Elegant dark design for digital studio. Focus on visual content and modern web design trends with unique animations.',
+    portfolioItem8Category: 'Portfolio',
+    
+    portfolioItem9Title: 'PostPilot Marketing',
+    portfolioItem9Description: 'Bright design for marketing platform',
+    portfolioItem9DetailedDescription: 'Dynamic and bright design for marketing platform. Optimized for conversion and customer acquisition with focus on performance.',
+    portfolioItem9Category: 'Marketing',
+    
+    portfolioItem10Title: 'Gravity Team',
+    portfolioItem10Description: 'Our own website with dark design and gradients',
+    portfolioItem10DetailedDescription: 'Own corporate website of Gravity Team studio. Demonstrates our capabilities in modern web design and development.',
+    portfolioItem10Category: 'Own Project',
+    
+    portfolioItem11Title: 'Certo Mobile Privacy',
+    portfolioItem11Description: 'Mobile privacy protection app',
+    portfolioItem11DetailedDescription: 'Professional landing for mobile privacy protection app. Bright design with focus on security and user trust. Includes reviews, statistics and detailed feature description.',
+    portfolioItem11Category: 'Mobile App',
+    
+    portfolioItem12Title: 'Sable Financial',
+    portfolioItem12Description: 'Financial platform with dark design',
+    portfolioItem12DetailedDescription: 'Modern financial platform with elegant dark design. Focus on ease of use of financial services and intuitive interface. Includes comparison tables and reviews.',
+    portfolioItem12Category: 'Fintech',
+    
+    portfolioItem13Title: 'Web3 Design Studio',
+    portfolioItem13Description: 'Design studio for Web3 projects',
+    portfolioItem13DetailedDescription: 'Innovative design studio specializing in Web3 projects. Dark futuristic design with focus on blockchain technologies and NFT projects. Demonstrates portfolio and work process.',
+    portfolioItem13Category: 'Web3',
+    
     // Calculator
     projectType: 'Project Type',
     landingPage: 'Landing Page',
@@ -497,6 +628,72 @@ const translations = {
     portfolioCTAText: 'Давайте обсудим ваш проект и создадим что-то уникальное вместе',
     startProject: 'Начать проект',
     
+    // Portfolio items
+    portfolioItem1Title: 'Агентство веб-разработки',
+    portfolioItem1Description: 'Современный дизайн для креативного агентства с портфолио работ',
+    portfolioItem1DetailedDescription: 'Полнофункциональный сайт для креативного агентства, демонстрирующий портфолио работ и услуги. Дизайн выполнен в современном стиле с акцентом на визуальный контент и удобную навигацию.',
+    portfolioItem1Category: 'Веб-дизайн',
+    
+    portfolioItem2Title: 'Welcome Studio',
+    portfolioItem2Description: 'Минималистичный дизайн студии с акцентом на опыт пользователя',
+    portfolioItem2DetailedDescription: 'Элегантный сайт для дизайн-студии с минималистичным подходом. Фокус на UX/UI дизайне и презентации творческих решений. Использованы современные принципы веб-дизайна.',
+    portfolioItem2Category: 'UX/UI Дизайн',
+    
+    portfolioItem3Title: 'Бизнес-решения Optium',
+    portfolioItem3Description: 'Корпоративный сайт для технологических бизнес-решений',
+    portfolioItem3DetailedDescription: 'Профессиональный корпоративный сайт для технологической компании. Представляет бизнес-решения и услуги компании с акцентом на надежность и инновации.',
+    portfolioItem3Category: 'Корпоративный',
+    
+    portfolioItem4Title: 'Digital makers',
+    portfolioItem4Description: 'Платформа для цифровых производителей с современным интерфейсом',
+    portfolioItem4DetailedDescription: 'Инновационная платформа для цифровых креаторов и производителей. Обеспечивает инструменты для создания, управления и продажи цифровых продуктов.',
+    portfolioItem4Category: 'Платформа',
+    
+    portfolioItem5Title: 'Дизайн-студия',
+    portfolioItem5Description: 'Элегантный сайт для дизайнерского агентства',
+    portfolioItem5DetailedDescription: 'Стильный и функциональный сайт для дизайн-агентства. Демонстрирует креативный подход команды и высокое качество выполненных проектов.',
+    portfolioItem5Category: 'Креативный',
+    
+    portfolioItem6Title: 'Мобильное приложение',
+    portfolioItem6Description: 'UI дизайн для мобильного приложения доставки',
+    portfolioItem6DetailedDescription: 'Современный дизайн мобильного приложения для службы доставки. Интуитивный интерфейс с акцентом на удобство использования и скорость заказа.',
+    portfolioItem6Category: 'Мобильный',
+    
+    portfolioItem7Title: 'Miro коллаборация',
+    portfolioItem7Description: 'Интерфейс для платформы командной работы',
+    portfolioItem7DetailedDescription: 'Дизайн интерфейса для платформы командного сотрудничества. Обеспечивает эффективное взаимодействие между членами команды и управление проектами.',
+    portfolioItem7Category: 'SaaS',
+    
+    portfolioItem8Title: 'Digital Studio',
+    portfolioItem8Description: 'Темный дизайн для цифровой студии с портфолио',
+    portfolioItem8DetailedDescription: 'Элегантный темный дизайн для цифровой студии. Акцент на визуальном контенте и современных трендах веб-дизайна с уникальными анимациями.',
+    portfolioItem8Category: 'Портфолио',
+    
+    portfolioItem9Title: 'PostPilot маркетинг',
+    portfolioItem9Description: 'Яркий дизайн для маркетинговой платформы',
+    portfolioItem9DetailedDescription: 'Динамичный и яркий дизайн для маркетинговой платформы. Оптимизирован для конверсии и привлечения клиентов с акцентом на результативность.',
+    portfolioItem9Category: 'Маркетинг',
+    
+    portfolioItem10Title: 'Gravity Team',
+    portfolioItem10Description: 'Наш собственный сайт с темным дизайном и градиентами',
+    portfolioItem10DetailedDescription: 'Собственный корпоративный сайт студии Gravity Team. Демонстрирует наши возможности в области современного веб-дизайна и разработки.',
+    portfolioItem10Category: 'Собственный проект',
+    
+    portfolioItem11Title: 'Certo Mobile Privacy',
+    portfolioItem11Description: 'Приложение для защиты мобильной приватности',
+    portfolioItem11DetailedDescription: 'Профессиональный лендинг для приложения защиты мобильной приватности. Яркий дизайн с акцентом на безопасность и доверие пользователей. Включает отзывы, статистику и детальное описание функций.',
+    portfolioItem11Category: 'Мобильное приложение',
+    
+    portfolioItem12Title: 'Sable Financial',
+    portfolioItem12Description: 'Финансовая платформа с темным дизайном',
+    portfolioItem12DetailedDescription: 'Современная финансовая платформа с элегантным темным дизайном. Фокус на удобстве использования финансовых услуг и интуитивном интерфейсе. Включает сравнительные таблицы и отзывы.',
+    portfolioItem12Category: 'Финтех',
+    
+    portfolioItem13Title: 'Web3 Design Studio',
+    portfolioItem13Description: 'Дизайн-студия для Web3 проектов',
+    portfolioItem13DetailedDescription: 'Инновационная дизайн-студия, специализирующаяся на Web3 проектах. Темный футуристичный дизайн с акцентом на блокчейн технологии и NFT проекты. Демонстрирует портфолио и процесс работы.',
+    portfolioItem13Category: 'Web3',
+    
     // Calculator
     projectType: 'Тип проекта',
     landingPage: 'Landing-страница',
@@ -605,7 +802,7 @@ const translations = {
     faq3Question: 'Могу ли я самостоятельно редактировать контент на сайте?',
     faq3Answer: 'Да, все наши сайты имеют удобную систему управления контентом, которая позволяет легко редактировать тексты и изображения.',
     faq4Question: 'Адаптивны ли ваши сайты под мобильные устройства?',
-    faq4Answer: 'Абсолютно! Все наши сайты полностью адаптивны и отлично выглядают на всех устройствах.',
+    faq4Answer: 'Абсолютно! Все наши сайты полностью адаптивны и отлично выглядят на всех устройствах.',
     faq5Question: 'Какие способы оплаты вы принимаете?',
     faq5Answer: 'Мы принимаем оплату банковским переводом, картой Visa/MasterCard и через PayPal.',
     allServices: 'Все услуги',
