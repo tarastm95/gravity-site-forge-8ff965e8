@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { ZoomIn, ZoomOut, X } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface PortfolioItem {
   id: number;
@@ -15,6 +15,7 @@ interface PortfolioItem {
 }
 
 const Portfolio: React.FC = () => {
+  const { t } = useLanguage();
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
   const [zoomLevel, setZoomLevel] = useState(1);
 
@@ -188,10 +189,10 @@ const Portfolio: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Наше портфоліо
+            {t('portfolioTitle')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Переглянуте наші найкращі роботи - від лендінгів до складних веб-платформ
+            {t('portfolioSubtitle')}
           </p>
         </div>
 
@@ -229,7 +230,7 @@ const Portfolio: React.FC = () => {
                     onClick={() => openModal(item)}
                     className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
                   >
-                    Детальніше →
+                    {t('detailsButton')} →
                   </button>
                   <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                     <span className="text-white text-sm">→</span>
@@ -244,16 +245,16 @@ const Portfolio: React.FC = () => {
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 p-8 rounded-2xl border border-blue-500/30">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Готові створити щось подібне?
+              {t('portfolioCTA')}
             </h3>
             <p className="text-gray-300 mb-6">
-              Давайте обговоримо ваш проект та створимо щось унікальне разом
+              {t('portfolioCTAText')}
             </p>
             <button 
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
-              Почати проект
+              {t('startProject')}
             </button>
           </div>
         </div>
