@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { useAppSelector } from '../hooks/useAppDispatch';
+import { useAppSelector } from '../hooks/useAppSelector';
 
 const Services: React.FC = () => {
   const { services } = useAppSelector(state => state.services);
