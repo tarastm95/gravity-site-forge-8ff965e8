@@ -20,7 +20,7 @@ const Calculator: React.FC = () => {
     corporate: { name: t('corporateWebsite'), base: 1200 },
     store: { name: t('onlineStore'), base: 2500 },
     education: { name: t('educationalPlatform'), base: 3500 },
-    portfolio: { name: t('portfolio'), base: 800 },
+    portfolio: { name: t('portfolioSite'), base: 800 },
     media: { name: t('mediaPortal'), base: 4000 }
   };
 
@@ -70,7 +70,7 @@ const Calculator: React.FC = () => {
               <h2 className="text-4xl font-bold text-white">{t('calculator')}</h2>
             </div>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Розрахуйте орієнтовну вартість вашого проекту
+              {t('calculatorSubtitle')}
             </p>
           </div>
 
@@ -175,7 +175,7 @@ const Calculator: React.FC = () => {
                   {t('calculate')}
                 </Button>
                 <p className="text-blue-100 text-sm mt-4">
-                  *Остаточна вартість може відрізнятися після детального обговорення проекту
+                  {t('calculatorDisclaimer')}
                 </p>
               </div>
             </div>

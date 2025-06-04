@@ -1,7 +1,10 @@
 
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Partners: React.FC = () => {
+  const { t } = useLanguage();
+  
   const partners = [
     { name: 'Bitkub', logo: '🟦' },
     { name: 'Binance', logo: '🟨' },
@@ -23,10 +26,10 @@ const Partners: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Наші партнери та друзі
+            {t('partnersTitle')}
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Ми пишаємося співпрацею з провідними проектами та компаніями у сфері e-commerce, EdTech, FinTech та інших
+            {t('partnersSubtitle')}
           </p>
         </div>
 
@@ -48,7 +51,7 @@ const Partners: React.FC = () => {
 
         <div className="text-center mt-12">
           <p className="text-gray-400 italic">
-            "Ми працюємо з найкращими, щоб забезпечити найкращі результати для наших клієнтів"
+            {t('partnersQuote')}
           </p>
         </div>
       </div>

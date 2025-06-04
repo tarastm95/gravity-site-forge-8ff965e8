@@ -1,8 +1,10 @@
 
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Testimonials: React.FC = () => {
+  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
@@ -60,10 +62,10 @@ const Testimonials: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Що про нас кажуть
+            {t('testimonialsTitle')}
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Відгуки наших клієнтів — найкраща реклама нашої роботи
+            {t('testimonialsSubtitle')}
           </p>
         </div>
 

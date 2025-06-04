@@ -52,7 +52,7 @@ const FAQ: React.FC = () => {
               <h2 className="text-4xl font-bold text-white">{t('faqTitle')}</h2>
             </div>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Відповіді на найпоширеніші питання наших клієнтів
+              {t('faqSubtitle')}
             </p>
           </div>
 

@@ -1,14 +1,17 @@
 
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const About: React.FC = () => {
+  const { t } = useLanguage();
+  
   const stats = [
-    { value: '~100 млн $', label: 'сукупний обсяг проектів', icon: '💰' },
-    { value: '0.8%', label: 'частка глобального ринку', icon: '📊' },
-    { value: '30+', label: 'членів команди', icon: '👥' },
-    { value: '1,200+', label: 'завершених проєктів', icon: '🚀' },
-    { value: '24/7', label: 'цілодобова підтримка', icon: '⏰' },
-    { value: '5 млрд', label: 'загальний трафік', icon: '🌐' },
+    { value: t('aboutStat1'), label: t('aboutStat1Label'), icon: '💰' },
+    { value: t('aboutStat2'), label: t('aboutStat2Label'), icon: '📊' },
+    { value: t('aboutStat3'), label: t('aboutStat3Label'), icon: '👥' },
+    { value: t('aboutStat4'), label: t('aboutStat4Label'), icon: '🚀' },
+    { value: t('aboutStat5'), label: t('aboutStat5Label'), icon: '⏰' },
+    { value: t('aboutStat6'), label: t('aboutStat6Label'), icon: '🌐' },
   ];
 
   return (
@@ -22,11 +25,10 @@ const About: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Про нашу команду
+            {t('aboutTitle')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ми — команда Gravity Team, що з 2017 року допомагає бізнесам запускати й масштабувати 
-            інтернет-проєкти. Наші ключові цінності: інноваційність, прозорість і якість.
+            {t('aboutDescription')}
           </p>
         </div>
 
@@ -52,12 +54,10 @@ const About: React.FC = () => {
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Чому обирають нас?
+              {t('aboutWhyUs')}
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              Ми не просто створюємо сайти — ми будуємо цифрові рішення, які допомагають бізнесу рости. 
-              Кожен проект для нас — це можливість втілити інноваційні ідеї та досягти максимального результату 
-              для наших клієнтів.
+              {t('aboutWhyUsText')}
             </p>
           </div>
         </div>

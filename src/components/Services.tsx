@@ -1,8 +1,11 @@
+
 import React from 'react';
 import { useAppSelector } from '../hooks/useAppSelector';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Services: React.FC = () => {
   const { services } = useAppSelector(state => state.services);
+  const { t } = useLanguage();
   
   const mainServices = services.filter(service => service.category === 'main');
   const additionalServices = services.filter(service => service.category === 'additional');
@@ -41,7 +44,7 @@ const Services: React.FC = () => {
         onClick={() => scrollToSection('contact')}
         className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-medium"
       >
-        Замовити зараз
+        {t('orderNow')}
       </button>
     </div>
   );
@@ -58,10 +61,10 @@ const Services: React.FC = () => {
         {/* Main Services */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Наші послуги
+            {t('servicesTitle')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Повний спектр послуг для створення та розвитку вашого онлайн-бізнесу
+            {t('servicesSubtitle')}
           </p>
         </div>
 
@@ -74,10 +77,10 @@ const Services: React.FC = () => {
         {/* Additional Services */}
         <div className="text-center mb-12">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Додаткові послуги
+            {t('additionalServicesTitle')}
           </h3>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Комплексні рішення для повного розвитку вашого бренду
+            {t('additionalServicesSubtitle')}
           </p>
         </div>
 
@@ -91,16 +94,16 @@ const Services: React.FC = () => {
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 p-8 rounded-2xl border border-blue-500/30">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Не знайшли потрібну послугу?
+              {t('notFoundService')}
             </h3>
             <p className="text-gray-300 mb-6">
-              Зв'яжіться з нами для індивідуальної консультації та розробки рішення під ваші потреби
+              {t('notFoundServiceText')}
             </p>
             <button 
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
-              Індивідуальна консультація
+              {t('customConsultation')}
             </button>
           </div>
         </div>

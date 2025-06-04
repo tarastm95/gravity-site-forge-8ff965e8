@@ -1,7 +1,10 @@
 
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -21,23 +24,22 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
-            Створюємо сучасні
+            {t('heroTitle1')}
             <span className="block bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              сайти для розвитку
+              {t('heroTitle2')}
             </span>
-            <span className="block">вашого бізнесу</span>
+            <span className="block">{t('heroTitle3')}</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in delay-300">
-            Наша команда розробників і дизайнерів побудує сайт будь-якої складності — 
-            від лендінгу до масштабного маркетплейсу
+            {t('heroSubtitle')}
           </p>
           
           <button 
             onClick={() => scrollToSection('contact')}
             className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-lg px-8 py-4 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 animate-fade-in delay-500 shadow-2xl"
           >
-            Отримати безкоштовну консультацію
+            {t('heroButton')}
           </button>
         </div>
       </div>
