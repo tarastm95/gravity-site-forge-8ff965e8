@@ -23,6 +23,43 @@ const translations = {
     getConsultation: 'Отримати консультацію',
     allServices: 'Усі послуги',
 
+    // Services Section
+    servicesTitle: 'Наші послуги',
+    servicesSubtitle: 'Повний спектр послуг для вашого бізнесу',
+    additionalServicesTitle: 'Додаткові послуги',
+    additionalServicesSubtitle: 'Доповніть ваш проєкт професійним дизайном',
+    notFoundService: 'Не знайшли потрібну послугу?',
+    notFoundServiceText: 'Ми створюємо індивідуальні рішення під ваші потреби',
+    customConsultation: 'Індивідуальна консультація',
+
+    // Main Services
+    onlineStoreTitle: 'Інтернет-магазин',
+    onlineStoreDescription: 'Повнофункціональний інтернет-магазин з системою оплати, адмін-панеллю та інтеграцією з CRM',
+    educationalPlatformTitle: 'Освітня платформа',
+    educationalPlatformDescription: 'Платформа для онлайн-навчання з відео-уроками, тестами та системою сертифікації',
+    landingPageTitle: 'Landing Page',
+    landingPageDescription: 'Продаюча сторінка з високою конверсією для ваших товарів або послуг',
+    corporateWebsiteTitle: 'Корпоративний сайт',
+    corporateWebsiteDescription: 'Представницький сайт компанії з каталогом послуг, новинами та формами зворотного зв\'язку',
+    portfolioSiteTitle: 'Сайт-портфоліо',
+    portfolioSiteDescription: 'Персональний сайт для демонстрації ваших робіт та досягнень',
+    mediaPortalTitle: 'Медіа-портал',
+    mediaPortalDescription: 'Новинний портал або блог з системою публікацій та коментарів',
+
+    // Additional Services
+    logoDesignTitle: 'Дизайн логотипу',
+    logoDesignDescription: 'Розробка логотипу з унікальною ідеєю, адаптивного до всіх носіїв: від візиток до сайту',
+    printDesignTitle: 'Дизайн поліграфії',
+    printDesignDescription: 'Дизайн візиток, буклетів, флаєрів: від макету до готового файлу для друку',
+    bannerDesignTitle: 'Дизайн банерів',
+    bannerDesignDescription: 'Створення банерів для сайтів, соцмереж, а також слайдів-презентацій',
+    redesignTitle: 'Редизайн сайту',
+    redesignDescription: 'Повне оновлення візуальної частини та архітектури: адаптивність, оптимізація швидкості, сучасні UI/UX-практики',
+
+    // Buttons
+    detailsButton: 'Деталі',
+    orderNow: 'Замовити зараз',
+
     // Contact Form
     contactTitle: 'Зв\'яжіться з нами',
     contactSubtitle: 'Будемо раді обговорити ваш проєкт! Заповніть форму або скористайтесь контактами нижче.',
@@ -44,7 +81,7 @@ const translations = {
     workingHours: '24/7 підтримка',
     followUs: 'Слідкуйте за нами',
 
-    // Services
+    // Legacy Services (for backward compatibility)
     logoService: 'Логотип',
     logoDescription: 'Розробка логотипу з унікальною ідеєю, адаптивного до всіх носіїв: від візиток до сайту.',
     printService: 'Візитки, буклети, флаєри',
@@ -52,9 +89,6 @@ const translations = {
     bannerService: 'Банери, презентації (дизайн)',
     bannerDescription: 'Створення банерів для сайтів, соцмереж, а також слайдів-презентацій у PowerPoint/Keynote.',
     redesignService: 'Редизайн сайту',
-    redesignDescription: 'Повне оновлення візуальної частини та архітектури: адаптивність, оптимізація швидкості, сучасні UI/UX-практики.',
-    orderNow: 'Замовити зараз',
-    details: 'Деталі',
 
     // Testimonials
     testimonialsTitle: 'Відгуки клієнтів',
@@ -93,7 +127,6 @@ const translations = {
     footerEmail: 'info@gravityteam.ua',
     newsletter: 'Підпишіться на наші новини',
     newsletterDescription: 'Отримуйте останні новини про тренди веб-розробки та спеціальні пропозиції',
-    emailPlaceholder: 'Ваш email',
     subscribe: 'Підписатися',
     allRightsReserved: 'Усі права захищені.'
   },
@@ -109,6 +142,43 @@ const translations = {
     contacts: 'Contacts',
     getConsultation: 'Get Consultation',
     allServices: 'All Services',
+
+    // Services Section
+    servicesTitle: 'Our Services',
+    servicesSubtitle: 'Full range of services for your business',
+    additionalServicesTitle: 'Additional Services',
+    additionalServicesSubtitle: 'Complete your project with professional design',
+    notFoundService: 'Can\'t find the service you need?',
+    notFoundServiceText: 'We create custom solutions for your needs',
+    customConsultation: 'Custom consultation',
+
+    // Main Services
+    onlineStoreTitle: 'Online Store',
+    onlineStoreDescription: 'Full-featured online store with payment system, admin panel and CRM integration',
+    educationalPlatformTitle: 'Educational Platform',
+    educationalPlatformDescription: 'Online learning platform with video lessons, tests and certification system',
+    landingPageTitle: 'Landing Page',
+    landingPageDescription: 'High-converting sales page for your products or services',
+    corporateWebsiteTitle: 'Corporate Website',
+    corporateWebsiteDescription: 'Company representative website with service catalog, news and contact forms',
+    portfolioSiteTitle: 'Portfolio Site',
+    portfolioSiteDescription: 'Personal website to showcase your work and achievements',
+    mediaPortalTitle: 'Media Portal',
+    mediaPortalDescription: 'News portal or blog with publication and comment system',
+
+    // Additional Services
+    logoDesignTitle: 'Logo Design',
+    logoDesignDescription: 'Logo development with unique idea, adaptive to all media: from business cards to websites',
+    printDesignTitle: 'Print Design',
+    printDesignDescription: 'Design of business cards, brochures, flyers: from layout to ready file for printing',
+    bannerDesignTitle: 'Banner Design',
+    bannerDesignDescription: 'Creating banners for websites, social media, and presentation slides',
+    redesignTitle: 'Website Redesign',
+    redesignDescription: 'Complete update of visual part and architecture: responsiveness, speed optimization, modern UI/UX practices',
+
+    // Buttons
+    detailsButton: 'Details',
+    orderNow: 'Order Now',
 
     // Contact Form
     contactTitle: 'Contact Us',
@@ -131,7 +201,7 @@ const translations = {
     workingHours: '24/7 support',
     followUs: 'Follow Us',
 
-    // Services
+    // Legacy Services (for backward compatibility)
     logoService: 'Logo',
     logoDescription: 'Logo development with unique idea, adaptive to all media: from business cards to websites.',
     printService: 'Business cards, brochures, flyers',
@@ -139,9 +209,6 @@ const translations = {
     bannerService: 'Banners, presentations (design)',
     bannerDescription: 'Creating banners for websites, social media, and presentation slides in PowerPoint/Keynote.',
     redesignService: 'Website redesign',
-    redesignDescription: 'Complete update of visual part and architecture: responsiveness, speed optimization, modern UI/UX practices.',
-    orderNow: 'Order Now',
-    details: 'Details',
 
     // Testimonials
     testimonialsTitle: 'Client Testimonials',
@@ -180,7 +247,6 @@ const translations = {
     footerEmail: 'info@gravityteam.ua',
     newsletter: 'Subscribe to our newsletter',
     newsletterDescription: 'Get the latest news about web development trends and special offers',
-    emailPlaceholder: 'Your email',
     subscribe: 'Subscribe',
     allRightsReserved: 'All rights reserved.'
   },
@@ -196,6 +262,43 @@ const translations = {
     contacts: 'Контакты',
     getConsultation: 'Получить консультацию',
     allServices: 'Все услуги',
+
+    // Services Section
+    servicesTitle: 'Наши услуги',
+    servicesSubtitle: 'Полный спектр услуг для вашего бизнеса',
+    additionalServicesTitle: 'Дополнительные услуги',
+    additionalServicesSubtitle: 'Дополните ваш проект профессиональным дизайном',
+    notFoundService: 'Не нашли нужную услугу?',
+    notFoundServiceText: 'Мы создаем индивидуальные решения под ваши потребности',
+    customConsultation: 'Индивидуальная консультация',
+
+    // Main Services
+    onlineStoreTitle: 'Интернет-магазин',
+    onlineStoreDescription: 'Полнофункциональный интернет-магазин с системой оплаты, админ-панелью и интеграцией с CRM',
+    educationalPlatformTitle: 'Образовательная платформа',
+    educationalPlatformDescription: 'Платформа для онлайн-обучения с видео-уроками, тестами и системой сертификации',
+    landingPageTitle: 'Landing Page',
+    landingPageDescription: 'Продающая страница с высокой конверсией для ваших товаров или услуг',
+    corporateWebsiteTitle: 'Корпоративный сайт',
+    corporateWebsiteDescription: 'Представительский сайт компании с каталогом услуг, новостями и формами обратной связи',
+    portfolioSiteTitle: 'Сайт-портфолио',
+    portfolioSiteDescription: 'Персональный сайт для демонстрации ваших работ и достижений',
+    mediaPortalTitle: 'Медиа-портал',
+    mediaPortalDescription: 'Новостной портал или блог с системой публикаций и комментариев',
+
+    // Additional Services
+    logoDesignTitle: 'Дизайн логотипа',
+    logoDesignDescription: 'Разработка логотипа с уникальной идеей, адаптивного ко всем носителям: от визиток до сайта',
+    printDesignTitle: 'Дизайн полиграфии',
+    printDesignDescription: 'Дизайн визиток, буклетов, флаеров: от макета до готового файла для печати',
+    bannerDesignTitle: 'Дизайн баннеров',
+    bannerDesignDescription: 'Создание баннеров для сайтов, соцсетей, а также слайдов-презентаций',
+    redesignTitle: 'Редизайн сайта',
+    redesignDescription: 'Полное обновление визуальной части и архитектуры: адаптивность, оптимизация скорости, современные UI/UX-практики',
+
+    // Buttons
+    detailsButton: 'Детали',
+    orderNow: 'Заказать сейчас',
 
     // Contact Form
     contactTitle: 'Свяжитесь с нами',
@@ -218,7 +321,7 @@ const translations = {
     workingHours: 'Поддержка 24/7',
     followUs: 'Следите за нами',
 
-    // Services
+    // Legacy Services (for backward compatibility)
     logoService: 'Логотип',
     logoDescription: 'Разработка логотипа с уникальной идеей, адаптивного ко всем носителям: от визиток до сайта.',
     printService: 'Визитки, буклеты, флаеры',
@@ -226,9 +329,6 @@ const translations = {
     bannerService: 'Баннеры, презентации (дизайн)',
     bannerDescription: 'Создание баннеров для сайтов, соцсетей, а также слайдов-презентаций в PowerPoint/Keynote.',
     redesignService: 'Редизайн сайта',
-    redesignDescription: 'Полное обновление визуальной части и архитектуры: адаптивность, оптимизация скорости, современные UI/UX-практики.',
-    orderNow: 'Заказать сейчас',
-    details: 'Детали',
 
     // Testimonials
     testimonialsTitle: 'Отзывы клиентов',
@@ -267,7 +367,6 @@ const translations = {
     footerEmail: 'info@gravityteam.ua',
     newsletter: 'Подпишитесь на наши новости',
     newsletterDescription: 'Получайте последние новости о трендах веб-разработки и специальные предложения',
-    emailPlaceholder: 'Ваш email',
     subscribe: 'Подписаться',
     allRightsReserved: 'Все права защищены.'
   }
