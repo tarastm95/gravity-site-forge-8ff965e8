@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
                 <p className="text-white">{t('footerEmail')}</p>
               </div>
               <div>
-                <p className="text-gray-400 text-sm">{t('workingHours')}:</p>
+                <p className="text-gray-400 text-sm">Режим роботи:</p>
                 <p className="text-white">{t('workingHours')}</p>
               </div>
               
