@@ -41,6 +41,30 @@ const ServiceDetail: React.FC = () => {
     }, 100);
   };
 
+  const getServiceTitle = (serviceId: string) => {
+    const titles = {
+      '1': t('onlineStoreTitle'),
+      '2': t('educationalPlatformTitle'),
+      '3': t('landingPageTitle'),
+      '4': t('corporateWebsiteTitle'),
+      '5': t('portfolioSiteTitle'),
+      '6': t('mediaPortalTitle')
+    };
+    return titles[serviceId] || service.title;
+  };
+
+  const getServiceDescription = (serviceId: string) => {
+    const descriptions = {
+      '1': t('onlineStoreDescription'),
+      '2': t('educationalPlatformDescription'),
+      '3': t('landingPageDescription'),
+      '4': t('corporateWebsiteDescription'),
+      '5': t('portfolioSiteDescription'),
+      '6': t('mediaPortalDescription')
+    };
+    return descriptions[serviceId] || service.description;
+  };
+
   const getServiceFeatures = (serviceId: string) => {
     const features = {
       '1': [
@@ -109,6 +133,8 @@ const ServiceDetail: React.FC = () => {
 
   const features = getServiceFeatures(service.id);
   const stats = getServiceStats(service.id);
+  const serviceTitle = getServiceTitle(service.id);
+  const serviceDescription = getServiceDescription(service.id);
 
   return (
     <div className="min-h-screen bg-gray-900">
@@ -132,10 +158,10 @@ const ServiceDetail: React.FC = () => {
 
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              {service.title}
+              {serviceTitle}
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              {service.description}
+              {serviceDescription}
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
