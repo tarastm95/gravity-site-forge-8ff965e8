@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -91,15 +90,16 @@ const HeroSlider: React.FC = () => {
             {slides[currentSlide].subtitle}
           </p>
           
-          {/* Enhanced CTA buttons with glassmorphism */}
+          {/* Enhanced CTA buttons with unified glassmorphism style */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="group relative overflow-hidden bg-white text-gray-900 text-lg px-10 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl font-semibold"
-            >
-              <span className="relative z-10">{t('orderNow')}</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-neon-blue to-neon-purple opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-            </button>
+            <GlassCard hover className="inline-block">
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="group relative overflow-hidden text-white text-lg px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold hover:text-neon-blue"
+              >
+                <span className="relative z-10">{t('orderNow')}</span>
+              </button>
+            </GlassCard>
             
             <GlassCard hover className="inline-block">
               <button 
