@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../hooks/useAppDispatch';
@@ -49,6 +48,19 @@ const Header: React.FC = () => {
     navigate(`/service/${serviceId}`);
     setIsServicesOpen(false);
     dispatch(closeMobileMenu());
+  };
+
+  // Get translated service title
+  const getServiceTitle = (serviceId: string) => {
+    const titleMap = {
+      '1': t('onlineStoreTitle'),
+      '2': t('educationalPlatformTitle'),
+      '3': t('landingPageTitle'),
+      '4': t('corporateWebsiteTitle'),
+      '5': t('portfolioSiteTitle'),
+      '6': t('mediaPortalTitle')
+    };
+    return titleMap[serviceId] || services.find(s => s.id === serviceId)?.title || '';
   };
 
   // Get main services from Redux store
@@ -105,7 +117,7 @@ const Header: React.FC = () => {
                       onClick={() => navigateToService(service.id)}
                       className="block w-full text-left px-4 py-2 text-white hover:bg-gray-700 transition-colors"
                     >
-                      {service.title}
+                      {getServiceTitle(service.id)}
                     </button>
                   ))}
                   <div className="border-t border-gray-700 my-2"></div>
@@ -200,7 +212,7 @@ const Header: React.FC = () => {
                     onClick={() => navigateToService(service.id)}
                     className="block w-full text-left text-gray-300 hover:text-blue-400 transition-colors py-1"
                   >
-                    {service.title}
+                    {getServiceTitle(service.id)}
                   </button>
                 ))}
                 <button 
