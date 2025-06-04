@@ -7,7 +7,6 @@ import About from '../components/About';
 import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Calculator from '../components/Calculator';
-import Partners from '../components/Partners';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import JoinTeam from '../components/JoinTeam';
@@ -25,7 +24,6 @@ const Index: React.FC = () => {
         <Services />
         <Portfolio />
         <Calculator />
-        <Partners />
         <Testimonials />
         <FAQ />
         <JoinTeam />
