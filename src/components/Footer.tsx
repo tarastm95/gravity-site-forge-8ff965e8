@@ -1,7 +1,10 @@
 
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
+  const { t } = useLanguage();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -12,26 +15,26 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    'Інтернет-магазин',
-    'Освітня платформа',
-    'Landing-page',
-    'Корпоративний сайт',
-    'Портфоліо',
-    'Медіа-портал'
+    t('ecommerce'),
+    t('educationalPlatform'),
+    t('landingPage'),
+    t('corporateWebsite'),
+    t('portfolio'),
+    t('mediaPortal')
   ];
 
   const company = [
-    { name: 'Про нас', id: 'about' },
-    { name: 'Портфоліо', id: 'portfolio' },
-    { name: 'Вакансії', id: 'join' },
-    { name: 'Блог', id: 'blog' }
+    { name: t('aboutUs'), id: 'about' },
+    { name: t('portfolio'), id: 'portfolio' },
+    { name: t('jobs'), id: 'join' },
+    { name: t('blog'), id: 'blog' }
   ];
 
   const help = [
     'FAQ',
-    'Підтримка',
-    'Політика конфіденційності',
-    'Умови використання'
+    t('support'),
+    t('privacyPolicy'),
+    t('termsOfUse')
   ];
 
   return (
@@ -41,7 +44,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Services */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">Послуги</h3>
+            <h3 className="text-white font-bold text-lg mb-4">{t('footerServices')}</h3>
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
@@ -58,7 +61,7 @@ const Footer: React.FC = () => {
 
           {/* Company */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">Компанія</h3>
+            <h3 className="text-white font-bold text-lg mb-4">{t('company')}</h3>
             <ul className="space-y-2">
               {company.map((item, index) => (
                 <li key={index}>
@@ -75,7 +78,7 @@ const Footer: React.FC = () => {
 
           {/* Help */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">Допомога</h3>
+            <h3 className="text-white font-bold text-lg mb-4">{t('help')}</h3>
             <ul className="space-y-2">
               {help.map((item, index) => (
                 <li key={index}>
@@ -92,19 +95,19 @@ const Footer: React.FC = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">Контакти</h3>
+            <h3 className="text-white font-bold text-lg mb-4">{t('contacts')}</h3>
             <div className="space-y-3">
               <div>
-                <p className="text-gray-400 text-sm">Адреса:</p>
-                <p className="text-white">м. Київ, вул. Хрещатик, 1</p>
+                <p className="text-gray-400 text-sm">{t('address')}:</p>
+                <p className="text-white">{t('footerAddress')}</p>
               </div>
               <div>
-                <p className="text-gray-400 text-sm">Телефон:</p>
-                <p className="text-white">+38 (044) 123-45-67</p>
+                <p className="text-gray-400 text-sm">{t('phoneLabel')}:</p>
+                <p className="text-white">{t('footerPhone')}</p>
               </div>
               <div>
-                <p className="text-gray-400 text-sm">Email:</p>
-                <p className="text-white">info@gravityteam.ua</p>
+                <p className="text-gray-400 text-sm">{t('emailLabel')}:</p>
+                <p className="text-white">{t('footerEmail')}</p>
               </div>
               
               {/* Social Media */}
@@ -142,19 +145,19 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 pt-8 mb-8">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-white font-bold text-xl mb-4">
-              Підпишіться на наші новини
+              {t('newsletter')}
             </h3>
             <p className="text-gray-400 mb-6">
-              Отримуйте останні новини про тренди веб-розробки та спеціальні пропозиції
+              {t('newsletterDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Ваш email"
+                placeholder={t('emailPlaceholder')}
                 className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
               />
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Підписатися
+                {t('subscribe')}
               </button>
             </div>
           </div>
@@ -164,15 +167,15 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 pt-8 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 mb-4 md:mb-0">
-              © {currentYear} Gravity Team — Усі права захищені.
+              © {currentYear} Gravity Team — {t('allRightsReserved')}
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                Політика конфіденційності
+                {t('privacyPolicy')}
               </a>
               <span className="text-gray-600">|</span>
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                Умови використання
+                {t('termsOfUse')}
               </a>
             </div>
           </div>
