@@ -248,7 +248,25 @@ const translations = {
     newsletter: 'Підпишіться на наші новини',
     newsletterDescription: 'Отримуйте останні новини про тренди веб-розробки та спеціальні пропозиції',
     subscribe: 'Підписатися',
-    allRightsReserved: 'Усі права захищені.'
+    allRightsReserved: 'Усі права захищені.',
+
+    // Service Detail Page
+    serviceDetailTitle: 'Деталі послуги',
+    backToServices: 'Назад до послуг',
+    orderService: 'Замовити послугу',
+    serviceFeatures: 'Особливості послуги',
+    serviceIncludes: 'Що входить у послугу',
+    serviceProcess: 'Процес розробки',
+    serviceTimeline: 'Терміни виконання',
+    servicePricing: 'Вартість послуги',
+    
+    // Service Page Titles (for browser title)
+    onlineStorePageTitle: 'Інтернет-магазин - Gravity Team',
+    educationalPlatformPageTitle: 'Освітня платформа - Gravity Team',
+    landingPagePageTitle: 'Landing Page - Gravity Team', 
+    corporateWebsitePageTitle: 'Корпоративний сайт - Gravity Team',
+    portfolioSitePageTitle: 'Сайт-портфоліо - Gravity Team',
+    mediaPortalPageTitle: 'Медіа-портал - Gravity Team',
   },
   en: {
     // Hero Section
@@ -489,7 +507,25 @@ const translations = {
     newsletter: 'Subscribe to our newsletter',
     newsletterDescription: 'Get the latest news about web development trends and special offers',
     subscribe: 'Subscribe',
-    allRightsReserved: 'All rights reserved.'
+    allRightsReserved: 'All rights reserved.',
+
+    // Service Detail Page
+    serviceDetailTitle: 'Service Details',
+    backToServices: 'Back to Services',
+    orderService: 'Order Service',
+    serviceFeatures: 'Service Features',
+    serviceIncludes: 'What\'s Included',
+    serviceProcess: 'Development Process',
+    serviceTimeline: 'Timeline',
+    servicePricing: 'Pricing',
+    
+    // Service Page Titles (for browser title)
+    onlineStorePageTitle: 'Online Store - Gravity Team',
+    educationalPlatformPageTitle: 'Educational Platform - Gravity Team',
+    landingPagePageTitle: 'Landing Page - Gravity Team',
+    corporateWebsitePageTitle: 'Corporate Website - Gravity Team',
+    portfolioSitePageTitle: 'Portfolio Site - Gravity Team',
+    mediaPortalPageTitle: 'Media Portal - Gravity Team',
   },
   ru: {
     // Hero Section
@@ -730,7 +766,25 @@ const translations = {
     newsletter: 'Подпишитесь на наши новости',
     newsletterDescription: 'Получайте последние новости о трендах веб-разработки и специальные предложения',
     subscribe: 'Подписаться',
-    allRightsReserved: 'Все права защищены.'
+    allRightsReserved: 'Все права защищены.',
+
+    // Service Detail Page
+    serviceDetailTitle: 'Детали услуги',
+    backToServices: 'Назад к услугам',
+    orderService: 'Заказать услугу',
+    serviceFeatures: 'Особенности услуги',
+    serviceIncludes: 'Что входит в услугу',
+    serviceProcess: 'Процесс разработки',
+    serviceTimeline: 'Сроки выполнения',
+    servicePricing: 'Стоимость услуги',
+    
+    // Service Page Titles (for browser title)
+    onlineStorePageTitle: 'Интернет-магазин - Gravity Team',
+    educationalPlatformPageTitle: 'Образовательная платформа - Gravity Team',
+    landingPagePageTitle: 'Landing Page - Gravity Team',
+    corporateWebsitePageTitle: 'Корпоративный сайт - Gravity Team',
+    portfolioSitePageTitle: 'Сайт-портфолио - Gravity Team',
+    mediaPortalPageTitle: 'Медиа-портал - Gravity Team',
   }
 };
 
