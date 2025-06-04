@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'uk' | 'en' | 'ru';
@@ -195,15 +196,23 @@ const translations = {
     // Testimonials
     testimonialsTitle: 'Що про нас кажуть',
     testimonialsSubtitle: 'Відгуки наших клієнтів — найкраща реклама нашої роботи',
+    
+    // Individual testimonials
     testimonial1Text: 'Gravity Team воістину професіонали: упродовж місяця створили для нас повноцінний інтернет-магазин, інтегрували CMS і платіжні системи. Результат — +40% продажів уже за перший квартал.',
     testimonial1Name: 'Ірина Петренко',
     testimonial1Position: 'CEO Fashion.ua',
+    
     testimonial2Text: 'Освітня платформа, яку розробила команда Gravity, перевершила всі наші очікування. Інтуїтивний інтерфейс, стабільна робота та відмінна підтримка. Рекомендую!',
     testimonial2Name: 'Олександр Коваленко',
     testimonial2Position: 'Засновник EdTech Hub',
-    testimonial3Text: 'З 2019 року команда Gravity Team — наш незмінний партнер із веб-розробки. Вони довели, що можуть забезпечувати високу якість та дотримуватися термінів.',
+    
+    testimonial3Text: 'З 2019 року команда Gravity Team — наш незмінний партнер із веб-розробки. Вони довели, що можуть забезпечувати високу якість і дотримуватися термінів. Дякуємо за професіоналізм!',
     testimonial3Name: 'Марія Сидоренко',
     testimonial3Position: 'Маркетинг-директор StartupX',
+    
+    testimonial4Text: 'Завдяки новому сайту з системою онлайн-замовлень наш бізнес виріс у 3 рази за рік. Gravity Team зрозуміли наші потреби і створили ідеальне рішення.',
+    testimonial4Name: 'Дмитро Іваненко',
+    testimonial4Position: 'Власник ресторану "Смак"',
     
     // Join Team
     joinTeamTitle: 'Приєднуйтесь до',
