@@ -2,6 +2,7 @@
 import React from 'react';
 import { useAppSelector } from '../hooks/useAppSelector';
 import { useLanguage } from '../contexts/LanguageContext';
+import ServiceCard from './ServiceCard';
 
 const Services: React.FC = () => {
   const { services } = useAppSelector(state => state.services);
@@ -16,38 +17,6 @@ const Services: React.FC = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const ServiceCard: React.FC<{ service: any; isLarge?: boolean }> = ({ service, isLarge = true }) => (
-    <div className={`bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105 group ${isLarge ? 'h-full' : ''}`}>
-      <h3 className={`font-bold text-white mb-4 group-hover:text-blue-400 transition-colors ${isLarge ? 'text-2xl' : 'text-xl'}`}>
-        {service.title}
-      </h3>
-      <p className={`text-gray-300 mb-6 leading-relaxed ${isLarge ? 'text-base' : 'text-sm'}`}>
-        {service.description}
-      </p>
-      
-      <div className="mb-6">
-        <div className="flex items-center gap-4 mb-2">
-          <span className="text-gray-500 line-through text-lg">
-            {service.originalPrice.toLocaleString()} ₴
-          </span>
-          <span className="bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">
-            -50%
-          </span>
-        </div>
-        <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-          {service.discountPrice.toLocaleString()} ₴
-        </div>
-      </div>
-      
-      <button 
-        onClick={() => scrollToSection('contact')}
-        className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-medium"
-      >
-        {t('orderNow')}
-      </button>
-    </div>
-  );
 
   return (
     <section id="services" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
