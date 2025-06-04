@@ -12,6 +12,7 @@ const Header: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { isMobileMenuOpen } = useAppSelector(state => state.ui);
+  const { services } = useAppSelector(state => state.services);
   const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -50,14 +51,8 @@ const Header: React.FC = () => {
     dispatch(closeMobileMenu());
   };
 
-  const services = [
-    { name: t('landingPage'), id: 'landing-page' },
-    { name: t('educationalPlatform'), id: 'educational-platform' },
-    { name: t('corporateWebsite'), id: 'corporate-website' },
-    { name: t('onlineStore'), id: 'online-store' },
-    { name: t('portfolio'), id: 'portfolio-site' },
-    { name: t('mediaPortal'), id: 'media-portal' },
-  ];
+  // Get main services from Redux store
+  const mainServices = services.filter(service => service.category === 'main');
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -104,13 +99,13 @@ const Header: React.FC = () => {
               
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-gray-800 rounded-lg shadow-xl py-2 z-50">
-                  {services.map((service, index) => (
+                  {mainServices.map((service) => (
                     <button
-                      key={index}
+                      key={service.id}
                       onClick={() => navigateToService(service.id)}
                       className="block w-full text-left px-4 py-2 text-white hover:bg-gray-700 transition-colors"
                     >
-                      {service.name}
+                      {service.title}
                     </button>
                   ))}
                   <div className="border-t border-gray-700 my-2"></div>
@@ -199,13 +194,13 @@ const Header: React.FC = () => {
               {/* Mobile Services Menu */}
               <div className="border-l-2 border-blue-500 pl-4">
                 <div className="text-white font-medium mb-2">{t('services')}</div>
-                {services.map((service, index) => (
+                {mainServices.map((service) => (
                   <button
-                    key={index}
+                    key={service.id}
                     onClick={() => navigateToService(service.id)}
                     className="block w-full text-left text-gray-300 hover:text-blue-400 transition-colors py-1"
                   >
-                    {service.name}
+                    {service.title}
                   </button>
                 ))}
                 <button 
