@@ -199,6 +199,7 @@ const translations = {
     address: 'Адреса',
     contactAddress: 'м. Київ, вул. Хрещатик, 1',
     workingHours: '24/7 підтримка',
+    workingHoursLabel: 'Режим роботи',
     followUs: 'Слідкуйте за нами',
 
     // Legacy Services (for backward compatibility)
@@ -219,7 +220,7 @@ const translations = {
     testimonial2Text: 'Завдяки команді Gravity Team наш стартап отримав сучасний лендінг з адаптивним дизайном. Конверсія виросла на 65%, а час завантаження скоротився втричі.',
     testimonial2Name: 'Максим Коваленко',
     testimonial2Position: 'Засновник TechStart',
-    testimonial3Text: 'Найкраща команда для розробки корпоративних сайтів! Gravity Team створили для нас багатомовний портал з CMS, що дозволив збільшити клієнтську базу на 80%.',
+    testimonial3Text: 'Найкраща команда для розробки корпоративних сайтів! Gravity Team створили для нас багатомовний портал з CMS, що дозволило збільшити клієнтську базу на 80%.',
     testimonial3Name: 'Олена Сидорова',
     testimonial3Position: 'Маркетинг-директор GlobalCorp',
     testimonial4Text: 'Замовляли у Gravity Team редизайн нашого ресторанного сайту. Отримали сучасний дизайн з онлайн-бронюванням столиків. Кількість бронювань зросла на 120%!',
@@ -545,6 +546,7 @@ const translations = {
     address: 'Address',
     contactAddress: 'Kyiv, Khreshchatyk St., 1',
     workingHours: '24/7 support',
+    workingHoursLabel: 'Working hours',
     followUs: 'Follow Us',
 
     // Legacy Services (for backward compatibility)
@@ -891,6 +893,7 @@ const translations = {
     address: 'Адрес',
     contactAddress: 'г. Киев, ул. Крещатик, 1',
     workingHours: 'Поддержка 24/7',
+    workingHoursLabel: 'Режим работы',
     followUs: 'Следите за нами',
 
     // Legacy Services (for backward compatibility)
@@ -899,7 +902,7 @@ const translations = {
     printService: 'Визитки, буклеты, флаеры',
     printDescription: 'Дизайн полиграфии: от макета до готового файла для печати. Поддержка всех популярных форматов.',
     bannerService: 'Баннеры, презентации (дизайн)',
-    bannerDescription: 'Создание баннеров для сайтов, соцсетей, а также слайдов-презентаций в PowerPoint/Keynote.',
+    bannerDescription: 'Создание баннеров для сайтов, соцсетей, а также слайдов-презентацій в PowerPoint/Keynote.',
     redesignService: 'Редизайн сайта',
 
     // Testimonials
@@ -1036,7 +1039,7 @@ const translations = {
     feature5_2: 'Контактная информация',
     feature5_3: 'Социальные сети',
     feature5_4: 'Загрузка резюме',
-    feature5_5: 'Блог/новости',
+    feature5_5: 'Блог/новини',
     feature5_6: 'Отзывы клиентов',
 
     // Service features - Media Portal
@@ -1045,7 +1048,7 @@ const translations = {
     feature6_3: 'Рекламные блоки',
     feature6_4: 'Рассылка новостей',
     feature6_5: 'Социальные сети',
-    feature6_6: 'Поиск по сайту',
+    feature6_6: 'Пошук по сайту',
   }
 };
 
