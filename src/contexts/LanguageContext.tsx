@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'uk' | 'en' | 'ru';
@@ -118,7 +117,8 @@ const translations = {
     faq4Question: 'Чи адаптивні ваші сайти під мобільні пристрої?',
     faq4Answer: 'Абсолютно! Всі наші сайти повністю адаптивні та чудово виглядають на всіх пристроях.',
     faq5Question: 'Які способи оплати ви приймаєте?',
-    faq5Answer: 'Ми приймаємо оплату банківським переказом, картою Visa/MasterCard та через PayPal.'
+    faq5Answer: 'Ми приймаємо оплату банківським переказом, картою Visa/MasterCard та через PayPal.',
+    allServices: 'Всі послуги',
   },
   en: {
     // Navigation
@@ -228,7 +228,8 @@ const translations = {
     faq4Question: 'Are your websites mobile-responsive?',
     faq4Answer: 'Absolutely! All our websites are fully responsive and look great on all devices.',
     faq5Question: 'What payment methods do you accept?',
-    faq5Answer: 'We accept bank transfers, Visa/MasterCard payments, and PayPal.'
+    faq5Answer: 'We accept bank transfers, Visa/MasterCard payments, and PayPal.',
+    allServices: 'All Services',
   },
   ru: {
     // Navigation
@@ -338,7 +339,8 @@ const translations = {
     faq4Question: 'Адаптивны ли ваши сайты под мобильные устройства?',
     faq4Answer: 'Абсолютно! Все наши сайты полностью адаптивны и отлично выглядят на всех устройствах.',
     faq5Question: 'Какие способы оплаты вы принимаете?',
-    faq5Answer: 'Мы принимаем оплату банковским переводом, картой Visa/MasterCard и через PayPal.'
+    faq5Answer: 'Мы принимаем оплату банковским переводом, картой Visa/MasterCard и через PayPal.',
+    allServices: 'Все услуги',
   }
 };
 

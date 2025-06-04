@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../hooks/useAppDispatch';
 import { useAppSelector } from '../hooks/useAppSelector';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -9,6 +10,7 @@ import LanguageSelector from './LanguageSelector';
 
 const Header: React.FC = () => {
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const { isMobileMenuOpen } = useAppSelector(state => state.ui);
   const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,20 +26,37 @@ const Header: React.FC = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      dispatch(closeMobileMenu());
+    // If we're not on the home page, navigate to home first
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    dispatch(closeMobileMenu());
+  };
+
+  const navigateToService = (serviceId: string) => {
+    navigate(`/service/${serviceId}`);
+    setIsServicesOpen(false);
+    dispatch(closeMobileMenu());
   };
 
   const services = [
-    { name: t('landingPage'), id: 'services' },
-    { name: t('educationalPlatform'), id: 'services' },
-    { name: t('corporateWebsite'), id: 'services' },
-    { name: t('onlineStore'), id: 'services' },
-    { name: t('portfolio'), id: 'services' },
-    { name: t('mediaPortal'), id: 'services' },
+    { name: t('landingPage'), id: 'landing-page' },
+    { name: t('educationalPlatform'), id: 'educational-platform' },
+    { name: t('corporateWebsite'), id: 'corporate-website' },
+    { name: t('onlineStore'), id: 'online-store' },
+    { name: t('portfolio'), id: 'portfolio-site' },
+    { name: t('mediaPortal'), id: 'media-portal' },
   ];
 
   return (
@@ -47,7 +66,10 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold text-white">
+          <div 
+            className="text-2xl font-bold text-white cursor-pointer"
+            onClick={() => navigate('/')}
+          >
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               GRAVITY
             </span>
@@ -85,12 +107,19 @@ const Header: React.FC = () => {
                   {services.map((service, index) => (
                     <button
                       key={index}
-                      onClick={() => scrollToSection(service.id)}
+                      onClick={() => navigateToService(service.id)}
                       className="block w-full text-left px-4 py-2 text-white hover:bg-gray-700 transition-colors"
                     >
                       {service.name}
                     </button>
                   ))}
+                  <div className="border-t border-gray-700 my-2"></div>
+                  <button
+                    onClick={() => scrollToSection('services')}
+                    className="block w-full text-left px-4 py-2 text-blue-400 hover:bg-gray-700 transition-colors"
+                  >
+                    {t('allServices')}
+                  </button>
                 </div>
               )}
             </div>
@@ -166,12 +195,27 @@ const Header: React.FC = () => {
               >
                 {t('about')}
               </button>
-              <button 
-                onClick={() => scrollToSection('services')}
-                className="text-white hover:text-blue-400 transition-colors text-left"
-              >
-                {t('services')}
-              </button>
+              
+              {/* Mobile Services Menu */}
+              <div className="border-l-2 border-blue-500 pl-4">
+                <div className="text-white font-medium mb-2">{t('services')}</div>
+                {services.map((service, index) => (
+                  <button
+                    key={index}
+                    onClick={() => navigateToService(service.id)}
+                    className="block w-full text-left text-gray-300 hover:text-blue-400 transition-colors py-1"
+                  >
+                    {service.name}
+                  </button>
+                ))}
+                <button 
+                  onClick={() => scrollToSection('services')}
+                  className="block w-full text-left text-blue-400 hover:text-blue-300 transition-colors py-1"
+                >
+                  {t('allServices')}
+                </button>
+              </div>
+              
               <button 
                 onClick={() => scrollToSection('portfolio')}
                 className="text-white hover:text-blue-400 transition-colors text-left"
