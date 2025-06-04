@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { ZoomIn, ZoomOut, X } from 'lucide-react';
@@ -307,14 +308,14 @@ const Portfolio: React.FC = () => {
               {/* Project details */}
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Опис проекту</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">{t('projectDescription')}</h4>
                   <p className="text-gray-300 leading-relaxed">
                     {selectedItem.detailedDescription}
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Технології</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">{t('technologies')}</h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedItem.technologies.map((tech, index) => (
                       <span
@@ -328,7 +329,7 @@ const Portfolio: React.FC = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Ключові особливості</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">{t('keyFeatures')}</h4>
                   <ul className="space-y-2">
                     {selectedItem.features.map((feature, index) => (
                       <li key={index} className="text-gray-300 flex items-center">
@@ -344,7 +345,7 @@ const Portfolio: React.FC = () => {
                     onClick={() => scrollToSection('contact')}
                     className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                   >
-                    Замовити подібний проект
+                    {t('orderSimilarProject')}
                   </button>
                 </div>
               </div>

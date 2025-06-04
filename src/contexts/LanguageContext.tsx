@@ -316,7 +316,7 @@ const translations = {
     reviewerName1: 'Олексій Петренко',
     reviewerCompany1: 'ТОВ "Технології майбутнього"',
     reviewText1: 'Чудовий результат! Наш сайт працює швидко та приносить нових клієнтів щодня.',
-    reviewerName2: 'Марія Іваненко',
+    reviewerName2: 'Марія Іванenko',
     reviewerCompany2: 'Студія дизайну "Креатив"',
     reviewText2: 'Професійна команда, дотримання термінів та якісний результат. Рекомендую!',
 
@@ -367,6 +367,12 @@ const translations = {
     feature6_4: 'Розсилка новин',
     feature6_5: 'Соціальні мережі',
     feature6_6: 'Пошук по сайту',
+
+    // Project Description
+    projectDescription: 'Опис проекту',
+    technologies: 'Технології',
+    keyFeatures: 'Ключові особливості',
+    orderSimilarProject: 'Замовити подібний проект',
   },
   en: {
     // Hero Slider
@@ -418,7 +424,7 @@ const translations = {
     portfolioItem2Description: 'Banking platform with high level of security',
     portfolioItem3Title: 'Online Learning Platform',
     portfolioItem3Category: 'Educational Platform',
-    portfolioItem3Description: 'Online learning platform with video courses',
+    portfolioItem3Description: 'Online learning platform with video lessons, tests and certification system',
     portfolioItem4Title: 'Restaurant Chain Website',
     portfolioItem4Category: 'Corporate Website',
     portfolioItem4Description: 'Restaurant chain with online booking',
@@ -540,11 +546,11 @@ const translations = {
 
     // Additional Services
     logoDesignTitle: 'Logo Design',
-    logoDesignDescription: 'Logo development with unique idea, adaptive to all media: from business cards to websites',
+    logoDesignDescription: 'Logo development with unique idea, adaptive to all media: from business cards to websites.',
     printDesignTitle: 'Print Design',
-    printDesignDescription: 'Design of business cards, brochures, flyers: from layout to ready file for printing',
+    printDesignDescription: 'Design of business cards, brochures, flyers: from layout to ready file for printing. Support for all popular formats.',
     bannerDesignTitle: 'Banner Design',
-    bannerDesignDescription: 'Creating banners for websites, social media, and presentation slides',
+    bannerDesignDescription: 'Creating banners for websites, social media, and presentation slides in PowerPoint/Keynote.',
     redesignTitle: 'Website Redesign',
     redesignDescription: 'Complete update of visual part and architecture: responsiveness, speed optimization, modern UI/UX practices',
 
@@ -726,6 +732,12 @@ const translations = {
     feature6_4: 'Newsletter',
     feature6_5: 'Social networks',
     feature6_6: 'Site search',
+
+    // Project Description
+    projectDescription: 'Project Description',
+    technologies: 'Technologies',
+    keyFeatures: 'Key Features',
+    orderSimilarProject: 'Order Similar Project',
   },
   ru: {
     // Hero Slider
@@ -752,7 +764,7 @@ const translations = {
     aboutTitle: 'О компании Gravity Team',
     aboutDescription: 'Мы — команда профессионалов с более чем 5-летним опытом в веб-разработке. Создаем качественные решения для бизнеса любого масштаба.',
     aboutStat1: '200+',
-    aboutStat1Label: 'Завершенных проектов',
+    aboutStat1Label: 'Завершённых проектов',
     aboutStat2: '150+',
     aboutStat2Label: 'Довольных клиентов',
     aboutStat3: '15+',
@@ -786,7 +798,7 @@ const translations = {
     portfolioItem5Description: 'Высококонверсионный лендинг для стартапа',
     portfolioItem6Title: 'News Portal',
     portfolioItem6Category: 'Медиа-портал',
-    portfolioItem6Description: 'Новостной портал с системой комментариев',
+    portfolioItem6Description: 'Новостной портал с системою комментариев',
     portfolioItem7Title: 'Photography Portfolio',
     portfolioItem7Category: 'Портфолио',
     portfolioItem7Description: 'Элегантное портфолио фотографа',
@@ -889,7 +901,7 @@ const translations = {
     educationalPlatformTitle: 'Образовательная платформа',
     educationalPlatformDescription: 'Платформа для онлайн-обучения с видео-уроками, тестами и системою сертификации',
     landingPageTitle: 'Landing Page',
-    landingPageDescription: 'Продающая страница с высокой конверсией для ваших товаров или услуг',
+    landingPageDescription: 'Продающая страница с высокой конверсии для ваших товаров или услуг',
     corporateWebsiteTitle: 'Корпоративный сайт',
     corporateWebsiteDescription: 'Представительский сайт компании с каталогом услуг, новостями и формами обратной связи',
     portfolioSiteTitle: 'Сайт-портфолио',
@@ -938,7 +950,7 @@ const translations = {
     printService: 'Визитки, буклеты, флаеры',
     printDescription: 'Дизайн полиграфии: от макета до готового файла для печати. Поддержка всех популярных форматов.',
     bannerService: 'Баннеры, презентации (дизайн)',
-    bannerDescription: 'Создание баннеров для сайтов, соцсетей, а также слайдов-презентацій в PowerPoint/Keynote.',
+    bannerDescription: 'Создание баннеров для сайтов, соцсетей, а также слайдов-презентаций в PowerPoint/Keynote.',
     redesignService: 'Редизайн сайта',
 
     // Testimonials
@@ -1003,7 +1015,7 @@ const translations = {
     serviceNotFound: 'Услуга не найдена',
     backToHome: 'Вернуться на главную',
     backButton: 'Вернуться назад',
-    completedProjects: 'Завершенных проектов',
+    completedProjects: 'Завершённых проектов',
     averageConversion: 'Средняя конверсия',
     averageDevelopmentTime: 'Среднее время разработки',
     whatIsIncluded: 'Что входит в услугу?',
@@ -1034,7 +1046,7 @@ const translations = {
     reviewerName1: 'Алексей Петренко',
     reviewerCompany1: 'ООО "Технологии будущего"',
     reviewText1: 'Прекрасный результат! Наш сайт работает быстро и приносит новых клиентов каждый день.',
-    reviewerName2: 'Мария Иваненко',
+    reviewerName2: 'Мария Иванenko',
     reviewerCompany2: 'Студия дизайна "Креатив"',
     reviewText2: 'Профессиональная команда, соблюдение сроков и качественный результат. Рекомендую!',
 
@@ -1085,6 +1097,12 @@ const translations = {
     feature6_4: 'Рассылка новостей',
     feature6_5: 'Социальные сети',
     feature6_6: 'Пошук по сайту',
+
+    // Project Description
+    projectDescription: 'Описание проекта',
+    technologies: 'Технологии',
+    keyFeatures: 'Ключевые особенности',
+    orderSimilarProject: 'Заказать похожий проект',
   }
 };
 
